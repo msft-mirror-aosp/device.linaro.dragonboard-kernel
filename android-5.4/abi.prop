@@ -1,1 +1,2 @@
 KMI_SYMBOL_LIST=abi_symbollist
+KERNEL_BINARY=vmlinux
