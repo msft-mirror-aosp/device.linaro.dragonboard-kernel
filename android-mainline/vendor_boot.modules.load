@@ -50,6 +50,7 @@ kernel/drivers/iommu/arm/arm-smmu/arm_smmu.ko
 kernel/drivers/gpu/drm/bridge/display-connector.ko
 kernel/drivers/gpu/drm/bridge/lontium-lt9611.ko
 kernel/drivers/gpu/drm/bridge/lontium-lt9611uxc.ko
+kernel/drivers/gpu/drm/scheduler/gpu-sched.ko
 kernel/drivers/gpu/drm/msm/msm.ko
 kernel/drivers/base/regmap/regmap-slimbus.ko
 kernel/drivers/base/regmap/regmap-spmi.ko
@@ -64,7 +65,6 @@ kernel/drivers/spi/spi-geni-qcom.ko
 kernel/drivers/spi/spi-qcom-qspi.ko
 kernel/drivers/spi/spi-qup.ko
 kernel/drivers/spmi/spmi-pmic-arb.ko
-kernel/drivers/net/phy/ax88796b.ko
 kernel/drivers/net/can/spi/mcp251xfd/mcp251xfd.ko
 kernel/drivers/net/wireless/ath/ath10k/ath10k_core.ko
 kernel/drivers/net/wireless/ath/ath10k/ath10k_pci.ko
@@ -73,7 +73,6 @@ kernel/drivers/net/wireless/ath/ath11k/ath11k.ko
 kernel/drivers/net/wireless/ath/ath11k/ath11k_ahb.ko
 kernel/drivers/net/wireless/ath/ath11k/ath11k_pci.ko
 kernel/drivers/net/wireless/ath/ath.ko
-kernel/drivers/net/usb/asix.ko
 kernel/drivers/net/usb/ax88179_178a.ko
 kernel/drivers/usb/common/ulpi.ko
 kernel/drivers/usb/host/ohci-hcd.ko
@@ -99,6 +98,7 @@ kernel/drivers/power/reset/syscon-reboot-mode.ko
 kernel/drivers/thermal/qcom/qcom_tsens.ko
 kernel/drivers/thermal/qcom/qcom-spmi-adc-tm5.ko
 kernel/drivers/thermal/qcom/qcom-spmi-temp-alarm.ko
+kernel/drivers/thermal/qcom/lmh.ko
 kernel/drivers/watchdog/qcom-wdt.ko
 kernel/drivers/watchdog/pm8916_wdt.ko
 kernel/drivers/cpufreq/qcom-cpufreq-hw.ko
@@ -107,6 +107,7 @@ kernel/drivers/mmc/host/cqhci.ko
 kernel/drivers/leds/led-class-multicolor.ko
 kernel/drivers/firmware/qcom-scm.ko
 kernel/drivers/mailbox/qcom-apcs-ipc-mailbox.ko
+kernel/drivers/mailbox/qcom-ipcc.ko
 kernel/drivers/hwspinlock/qcom_hwspinlock.ko
 kernel/drivers/remoteproc/qcom_pil_info.ko
 kernel/drivers/remoteproc/qcom_common.ko
