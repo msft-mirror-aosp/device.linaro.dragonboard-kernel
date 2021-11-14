@@ -1,8 +1,10 @@
 kernel/arch/arm64/kvm/kvm.ko
 kernel/arch/arm64/crypto/sha2-ce.ko
+kernel/arch/arm64/crypto/sha512-ce.ko
 kernel/arch/arm64/crypto/aes-ce-cipher.ko
 kernel/arch/arm64/crypto/aes-glue-ce.ko
 kernel/arch/arm64/crypto/sha256-arm64.ko
+kernel/arch/arm64/crypto/sha512-arm64.ko
 kernel/arch/arm64/crypto/chacha-neon.ko
 kernel/arch/arm64/crypto/poly1305-neon.ko
 kernel/arch/arm64/crypto/aes-arm64.ko
@@ -127,6 +129,8 @@ kernel/crypto/crc32c_generic.ko
 kernel/crypto/crc32_generic.ko
 kernel/crypto/authenc.ko
 kernel/crypto/authencesn.ko
+kernel/crypto/lzo.ko
+kernel/crypto/lzo-rle.ko
 kernel/crypto/lz4.ko
 kernel/crypto/rng.ko
 kernel/crypto/ansi_cprng.ko
@@ -146,8 +150,8 @@ kernel/block/bsg.ko
 kernel/block/mq-deadline.ko
 kernel/block/kyber-iosched.ko
 kernel/block/bfq.ko
-kernel/block/blk-mq-virtio.ko
 kernel/lib/kunit/kunit.ko
+kernel/lib/math/rational.ko
 kernel/lib/crypto/libchacha.ko
 kernel/lib/crypto/libaes.ko
 kernel/lib/crypto/libarc4.ko
@@ -187,6 +191,7 @@ kernel/lib/oid_registry.ko
 kernel/lib/ucs2_string.ko
 kernel/drivers/irqchip/irq-mbigen.ko
 kernel/drivers/bus/qcom-ebi2.ko
+kernel/drivers/bus/simple-pm-bus.ko
 kernel/drivers/pinctrl/pinctrl-single.ko
 kernel/drivers/gpio/gpio-generic.ko
 kernel/drivers/gpio/gpio-pl061.ko
@@ -225,6 +230,7 @@ kernel/drivers/tty/serial/serial_mctrl_gpio.ko
 kernel/drivers/tty/serdev/serdev.ko
 kernel/drivers/char/hw_random/rng-core.ko
 kernel/drivers/char/hw_random/hisi-rng.ko
+kernel/drivers/char/hw_random/arm_smccc_trng.ko
 kernel/drivers/iommu/iova.ko
 kernel/drivers/gpu/drm/drm_kms_helper.ko
 kernel/drivers/gpu/drm/drm.ko
@@ -245,6 +251,7 @@ kernel/drivers/nvdimm/nd_btt.ko
 kernel/drivers/nvdimm/of_pmem.ko
 kernel/drivers/dax/dax.ko
 kernel/drivers/scsi/scsi_mod.ko
+kernel/drivers/scsi/scsi_common.ko
 kernel/drivers/scsi/ufs/ufshcd-core.ko
 kernel/drivers/scsi/ufs/tc-dwc-g210-pltfrm.ko
 kernel/drivers/scsi/ufs/ufshcd-dwc.ko
@@ -261,6 +268,7 @@ kernel/drivers/net/mii.ko
 kernel/drivers/net/phy/mdio_devres.ko
 kernel/drivers/net/phy/phylink.ko
 kernel/drivers/net/phy/libphy.ko
+kernel/drivers/net/phy/ax88796b.ko
 kernel/drivers/net/phy/fixed_phy.ko
 kernel/drivers/net/mdio/fwnode_mdio.ko
 kernel/drivers/net/mdio/of_mdio.ko
@@ -276,6 +284,7 @@ kernel/drivers/net/ppp/pptp.ko
 kernel/drivers/net/slip/slhc.ko
 kernel/drivers/net/usb/rtl8150.ko
 kernel/drivers/net/usb/r8152.ko
+kernel/drivers/net/usb/asix.ko
 kernel/drivers/net/usb/cdc_ether.ko
 kernel/drivers/net/usb/cdc_eem.ko
 kernel/drivers/net/usb/usbnet.ko
@@ -333,6 +342,7 @@ kernel/drivers/rtc/rtc-pl030.ko
 kernel/drivers/rtc/rtc-pl031.ko
 kernel/drivers/i2c/i2c-core.ko
 kernel/drivers/i2c/algos/i2c-algo-bit.ko
+kernel/drivers/i3c/i3c.ko
 kernel/drivers/media/i2c/ir-kbd-i2c.ko
 kernel/drivers/media/mc/mc.ko
 kernel/drivers/media/v4l2-core/videodev.ko
@@ -347,6 +357,9 @@ kernel/drivers/media/common/videobuf2/videobuf2-vmalloc.ko
 kernel/drivers/media/common/videobuf2/videobuf2-dma-contig.ko
 kernel/drivers/media/usb/uvc/uvcvideo.ko
 kernel/drivers/media/usb/gspca/gspca_main.ko
+kernel/drivers/pps/pps_core.ko
+kernel/drivers/ptp/ptp.ko
+kernel/drivers/ptp/ptp_kvm.ko
 kernel/drivers/power/supply/power_supply.ko
 kernel/drivers/thermal/hisi_thermal.ko
 kernel/drivers/watchdog/watchdog.ko
@@ -458,6 +471,7 @@ kernel/net/sched/act_police.ko
 kernel/net/sched/act_gact.ko
 kernel/net/sched/act_mirred.ko
 kernel/net/sched/act_skbedit.ko
+kernel/net/sched/act_bpf.ko
 kernel/net/sched/sch_htb.ko
 kernel/net/sched/sch_ingress.ko
 kernel/net/sched/sch_sfq.ko
