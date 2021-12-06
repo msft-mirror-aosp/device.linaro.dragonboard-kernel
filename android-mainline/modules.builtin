@@ -7,7 +7,6 @@ kernel/arch/arm64/crypto/sha256-arm64.ko
 kernel/arch/arm64/crypto/sha512-arm64.ko
 kernel/arch/arm64/crypto/chacha-neon.ko
 kernel/arch/arm64/crypto/poly1305-neon.ko
-kernel/arch/arm64/crypto/aes-arm64.ko
 kernel/kernel/configs.ko
 kernel/kernel/kheaders.ko
 kernel/fs/binfmt_misc.ko
@@ -120,7 +119,6 @@ kernel/crypto/nhpoly1305.ko
 kernel/crypto/gcm.ko
 kernel/crypto/ccm.ko
 kernel/crypto/chacha20poly1305.ko
-kernel/crypto/cryptd.ko
 kernel/crypto/aes_generic.ko
 kernel/crypto/chacha_generic.ko
 kernel/crypto/poly1305_generic.ko
@@ -145,7 +143,6 @@ kernel/crypto/asymmetric_keys/asymmetric_keys.ko
 kernel/crypto/asymmetric_keys/public_key.ko
 kernel/crypto/asymmetric_keys/x509_key_parser.ko
 kernel/crypto/asymmetric_keys/pkcs7_message.ko
-kernel/crypto/crypto_simd.ko
 kernel/block/bsg.ko
 kernel/block/mq-deadline.ko
 kernel/block/kyber-iosched.ko
@@ -200,6 +197,7 @@ kernel/drivers/pci/endpoint/pci-epf-core.ko
 kernel/drivers/pci/endpoint/pci-epc-mem.ko
 kernel/drivers/pci/controller/pci-host-common.ko
 kernel/drivers/pci/controller/pci-host-generic.ko
+kernel/drivers/pci/controller/dwc/pcie-kirin.ko
 kernel/drivers/video/backlight/backlight.ko
 kernel/drivers/clk/clk-scpi.ko
 kernel/drivers/clk/hisilicon/crg-hi3516cv300.ko
@@ -388,6 +386,7 @@ kernel/drivers/mmc/host/sdhci.ko
 kernel/drivers/mmc/host/sdhci-pltfm.ko
 kernel/drivers/leds/led-class.ko
 kernel/drivers/leds/led-class-flash.ko
+kernel/drivers/leds/led-class-multicolor.ko
 kernel/drivers/leds/trigger/ledtrig-timer.ko
 kernel/drivers/leds/trigger/ledtrig-transient.ko
 kernel/drivers/firmware/arm_scpi.ko
