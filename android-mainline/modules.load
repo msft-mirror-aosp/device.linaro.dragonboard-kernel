@@ -27,6 +27,7 @@ kernel/drivers/clk/qcom/clk-spmi-pmic-div.ko
 kernel/drivers/dma/qcom/bam_dma.ko
 kernel/drivers/soc/qcom/qcom_aoss.ko
 kernel/drivers/soc/qcom/cmd-db.ko
+kernel/drivers/soc/qcom/cpr.ko
 kernel/drivers/soc/qcom/mdt_loader.ko
 kernel/drivers/soc/qcom/pdr_interface.ko
 kernel/drivers/soc/qcom/qmi_helpers.ko
@@ -36,6 +37,7 @@ kernel/drivers/soc/qcom/smem.ko
 kernel/drivers/soc/qcom/smp2p.ko
 kernel/drivers/soc/qcom/smsm.ko
 kernel/drivers/soc/qcom/socinfo.ko
+kernel/drivers/soc/qcom/spm.ko
 kernel/drivers/soc/qcom/apr.ko
 kernel/drivers/soc/qcom/llcc-qcom.ko
 kernel/drivers/soc/qcom/rpmhpd.ko
@@ -104,7 +106,6 @@ kernel/drivers/watchdog/pm8916_wdt.ko
 kernel/drivers/cpufreq/qcom-cpufreq-hw.ko
 kernel/drivers/mmc/host/sdhci-msm.ko
 kernel/drivers/mmc/host/cqhci.ko
-kernel/drivers/leds/led-class-multicolor.ko
 kernel/drivers/firmware/qcom-scm.ko
 kernel/drivers/mailbox/qcom-apcs-ipc-mailbox.ko
 kernel/drivers/mailbox/qcom-ipcc.ko
@@ -149,7 +150,7 @@ kernel/sound/soc/codecs/snd-soc-lpass-va-macro.ko
 kernel/sound/soc/qcom/snd-soc-sdm845.ko
 kernel/sound/soc/qcom/snd-soc-sm8250.ko
 kernel/sound/soc/qcom/snd-soc-qcom-common.ko
-kernel/sound/soc/qcom/qdsp6/q6dsp-common.ko
+kernel/sound/soc/qcom/qdsp6/snd-q6dsp-common.ko
 kernel/sound/soc/qcom/qdsp6/q6core.ko
 kernel/sound/soc/qcom/qdsp6/q6afe.ko
 kernel/sound/soc/qcom/qdsp6/q6afe-dai.ko
@@ -158,8 +159,12 @@ kernel/sound/soc/qcom/qdsp6/q6adm.ko
 kernel/sound/soc/qcom/qdsp6/q6routing.ko
 kernel/sound/soc/qcom/qdsp6/q6asm.ko
 kernel/sound/soc/qcom/qdsp6/q6asm-dai.ko
+kernel/sound/soc/qcom/qdsp6/snd-q6apm.ko
+kernel/sound/soc/qcom/qdsp6/q6apm-dai.ko
+kernel/sound/soc/qcom/qdsp6/q6apm-lpass-dais.ko
+kernel/sound/soc/qcom/qdsp6/q6prm.ko
+kernel/sound/soc/qcom/qdsp6/q6prm-clocks.ko
 kernel/net/qrtr/qrtr.ko
-kernel/net/qrtr/ns.ko
 kernel/net/qrtr/qrtr-smd.ko
 kernel/net/qrtr/qrtr-tun.ko
 kernel/net/qrtr/qrtr-mhi.ko
