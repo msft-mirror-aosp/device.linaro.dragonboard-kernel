@@ -85,6 +85,7 @@ kernel/drivers/net/wireless/ath/ath11k/ath11k.ko
 kernel/drivers/net/wireless/ath/ath11k/ath11k_ahb.ko
 kernel/drivers/net/wireless/ath/ath11k/ath11k_pci.ko
 kernel/drivers/net/wireless/ath/ath.ko
+kernel/drivers/net/mii.ko
 kernel/drivers/net/can/dev/can-dev.ko
 kernel/drivers/net/can/spi/mcp251xfd/mcp251xfd.ko
 kernel/drivers/net/can/vcan.ko
@@ -96,6 +97,16 @@ kernel/drivers/net/ppp/ppp_mppe.ko
 kernel/drivers/net/ppp/pppox.ko
 kernel/drivers/net/ppp/pptp.ko
 kernel/drivers/net/slip/slhc.ko
+kernel/drivers/net/usb/rtl8150.ko
+kernel/drivers/net/usb/r8152.ko
+kernel/drivers/net/usb/asix.ko
+kernel/drivers/net/usb/ax88179_178a.ko
+kernel/drivers/net/usb/cdc_ether.ko
+kernel/drivers/net/usb/cdc_eem.ko
+kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/cdc_ncm.ko
+kernel/drivers/net/usb/aqc111.ko
+kernel/drivers/net/usb/r8153_ecm.ko
 kernel/drivers/usb/common/ulpi.ko
 kernel/drivers/usb/host/ohci-hcd.ko
 kernel/drivers/usb/host/ohci-pci.ko
@@ -181,6 +192,7 @@ kernel/sound/soc/codecs/snd-soc-lpass-va-macro.ko
 kernel/sound/soc/qcom/snd-soc-sdm845.ko
 kernel/sound/soc/qcom/snd-soc-sm8250.ko
 kernel/sound/soc/qcom/snd-soc-qcom-common.ko
+kernel/sound/soc/qcom/snd-soc-qcom-sdw.ko
 kernel/sound/soc/qcom/qdsp6/snd-q6dsp-common.ko
 kernel/sound/soc/qcom/qdsp6/q6core.ko
 kernel/sound/soc/qcom/qdsp6/q6afe.ko
