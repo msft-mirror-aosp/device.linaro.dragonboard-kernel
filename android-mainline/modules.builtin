@@ -1,6 +1,7 @@
 kernel/arch/arm64/kvm/kvm.ko
 kernel/arch/arm64/crypto/sha2-ce.ko
 kernel/arch/arm64/crypto/sha512-ce.ko
+kernel/arch/arm64/crypto/ghash-ce.ko
 kernel/arch/arm64/crypto/polyval-ce.ko
 kernel/arch/arm64/crypto/aes-ce-cipher.ko
 kernel/arch/arm64/crypto/aes-glue-ce.ko
@@ -110,7 +111,6 @@ kernel/crypto/sha1_generic.ko
 kernel/crypto/sha256_generic.ko
 kernel/crypto/sha512_generic.ko
 kernel/crypto/blake2b_generic.ko
-kernel/crypto/gf128mul.ko
 kernel/crypto/ecb.ko
 kernel/crypto/cbc.ko
 kernel/crypto/cts.ko
@@ -158,6 +158,7 @@ kernel/lib/math/rational.ko
 kernel/lib/crypto/libcryptoutils.ko
 kernel/lib/crypto/libchacha.ko
 kernel/lib/crypto/libaes.ko
+kernel/lib/crypto/gf128mul.ko
 kernel/lib/crypto/libblake2s.ko
 kernel/lib/crypto/libchacha20poly1305.ko
 kernel/lib/crypto/libcurve25519-generic.ko
@@ -200,9 +201,6 @@ kernel/drivers/bus/simple-pm-bus.ko
 kernel/drivers/pinctrl/pinctrl-single.ko
 kernel/drivers/gpio/gpio-generic.ko
 kernel/drivers/gpio/gpio-pl061.ko
-kernel/drivers/pci/endpoint/pci-epc-core.ko
-kernel/drivers/pci/endpoint/pci-epf-core.ko
-kernel/drivers/pci/endpoint/pci-epc-mem.ko
 kernel/drivers/pci/controller/pci-host-common.ko
 kernel/drivers/pci/controller/pci-host-generic.ko
 kernel/drivers/pci/controller/dwc/pcie-kirin.ko
@@ -210,7 +208,6 @@ kernel/drivers/video/backlight/backlight.ko
 kernel/drivers/clk/clk-scpi.ko
 kernel/drivers/clk/hisilicon/crg-hi3516cv300.ko
 kernel/drivers/clk/hisilicon/clk-hi3519.ko
-kernel/drivers/clk/hisilicon/clk-hi3559a.ko
 kernel/drivers/clk/hisilicon/crg-hi3798cv200.ko
 kernel/drivers/dma/virt-dma.ko
 kernel/drivers/soc/qcom/qcom-geni-se.ko
@@ -269,7 +266,6 @@ kernel/drivers/net/dummy.ko
 kernel/drivers/net/wireguard/wireguard.ko
 kernel/drivers/net/ifb.ko
 kernel/drivers/net/macsec.ko
-kernel/drivers/net/mii.ko
 kernel/drivers/net/phy/mdio_devres.ko
 kernel/drivers/net/phy/phylink.ko
 kernel/drivers/net/phy/libphy.ko
@@ -279,16 +275,6 @@ kernel/drivers/net/mdio/fwnode_mdio.ko
 kernel/drivers/net/mdio/of_mdio.ko
 kernel/drivers/net/tun.ko
 kernel/drivers/net/veth.ko
-kernel/drivers/net/usb/rtl8150.ko
-kernel/drivers/net/usb/r8152.ko
-kernel/drivers/net/usb/asix.ko
-kernel/drivers/net/usb/ax88179_178a.ko
-kernel/drivers/net/usb/cdc_ether.ko
-kernel/drivers/net/usb/cdc_eem.ko
-kernel/drivers/net/usb/usbnet.ko
-kernel/drivers/net/usb/cdc_ncm.ko
-kernel/drivers/net/usb/aqc111.ko
-kernel/drivers/net/usb/r8153_ecm.ko
 kernel/drivers/uio/uio.ko
 kernel/drivers/usb/common/usb-common.ko
 kernel/drivers/usb/core/usbcore.ko
@@ -323,6 +309,7 @@ kernel/drivers/usb/gadget/function/usb_f_hid.ko
 kernel/drivers/usb/gadget/function/usb_f_accessory.ko
 kernel/drivers/usb/gadget/function/usb_f_audio_source.ko
 kernel/drivers/usb/typec/typec.ko
+kernel/drivers/usb/typec/altmodes/typec_displayport.ko
 kernel/drivers/usb/typec/tcpm/tcpm.ko
 kernel/drivers/usb/typec/tcpm/tcpci.ko
 kernel/drivers/usb/typec/ucsi/typec_ucsi.ko
@@ -342,7 +329,6 @@ kernel/drivers/input/misc/uinput.ko
 kernel/drivers/rtc/rtc-pl030.ko
 kernel/drivers/rtc/rtc-pl031.ko
 kernel/drivers/i2c/i2c-core.ko
-kernel/drivers/i2c/algos/i2c-algo-bit.ko
 kernel/drivers/i3c/i3c.ko
 kernel/drivers/media/i2c/ir-kbd-i2c.ko
 kernel/drivers/media/mc/mc.ko
@@ -357,6 +343,7 @@ kernel/drivers/media/common/videobuf2/videobuf2-dma-sg.ko
 kernel/drivers/media/common/videobuf2/videobuf2-memops.ko
 kernel/drivers/media/common/videobuf2/videobuf2-v4l2.ko
 kernel/drivers/media/common/videobuf2/videobuf2-vmalloc.ko
+kernel/drivers/media/common/uvc.ko
 kernel/drivers/media/usb/gspca/gspca_main.ko
 kernel/drivers/media/usb/uvc/uvcvideo.ko
 kernel/drivers/pps/pps_core.ko
@@ -396,6 +383,7 @@ kernel/drivers/leds/led-class-multicolor.ko
 kernel/drivers/leds/trigger/ledtrig-timer.ko
 kernel/drivers/leds/trigger/ledtrig-transient.ko
 kernel/drivers/firmware/arm_scpi.ko
+kernel/drivers/firmware/arm_scmi/scmi-core.ko
 kernel/drivers/firmware/arm_scmi/scmi-module.ko
 kernel/drivers/firmware/efi/efi-pstore.ko
 kernel/drivers/hid/hid.ko
@@ -450,7 +438,6 @@ kernel/drivers/devfreq/governor_userspace.ko
 kernel/drivers/devfreq/governor_passive.ko
 kernel/drivers/extcon/extcon-core.ko
 kernel/drivers/iio/industrialio.ko
-kernel/drivers/powercap/powercap_sys.ko
 kernel/drivers/android/binder.ko
 kernel/drivers/android/debug_kinfo.ko
 kernel/drivers/nvmem/nvmem_core.ko
@@ -491,7 +478,6 @@ kernel/net/sched/sch_fq_codel.ko
 kernel/net/sched/sch_fq.ko
 kernel/net/sched/cls_u32.ko
 kernel/net/sched/cls_fw.ko
-kernel/net/sched/cls_tcindex.ko
 kernel/net/sched/cls_basic.ko
 kernel/net/sched/cls_flow.ko
 kernel/net/sched/cls_bpf.ko
