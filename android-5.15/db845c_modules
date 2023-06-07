@@ -131,7 +131,6 @@ drivers/usb/typec/qcom-pmic-typec.ko
 drivers/watchdog/pm8916_wdt.ko
 drivers/watchdog/qcom-wdt.ko
 net/mac80211/mac80211.ko
-net/qrtr/ns.ko
 net/qrtr/qrtr.ko
 net/qrtr/qrtr-mhi.ko
 net/qrtr/qrtr-smd.ko
