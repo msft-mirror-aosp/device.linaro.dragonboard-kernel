@@ -1,0 +1,2 @@
+certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.1.25-android14-7-00382-g94e4512c314f-ab10274055
+kernel_release=6.1.25-android14-7-00382-g94e4512c314f-ab10274055
