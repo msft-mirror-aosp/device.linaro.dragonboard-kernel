@@ -10,7 +10,6 @@ kernel/arch/arm64/crypto/sha512-arm64.ko
 kernel/arch/arm64/crypto/chacha-neon.ko
 kernel/arch/arm64/crypto/poly1305-neon.ko
 kernel/kernel/configs.ko
-kernel/kernel/kheaders.ko
 kernel/fs/binfmt_misc.ko
 kernel/fs/binfmt_script.ko
 kernel/fs/binfmt_elf.ko
@@ -153,6 +152,7 @@ kernel/block/bsg.ko
 kernel/block/mq-deadline.ko
 kernel/block/kyber-iosched.ko
 kernel/block/bfq.ko
+kernel/lib/kunit/kunit.ko
 kernel/lib/math/rational.ko
 kernel/lib/crypto/libchacha.ko
 kernel/lib/crypto/libaes.ko
@@ -428,6 +428,7 @@ kernel/drivers/hwspinlock/hwspinlock_core.ko
 kernel/drivers/remoteproc/remoteproc.ko
 kernel/drivers/rpmsg/rpmsg_core.ko
 kernel/drivers/rpmsg/rpmsg_char.ko
+kernel/drivers/rpmsg/rpmsg_ctrl.ko
 kernel/drivers/devfreq/governor_simpleondemand.ko
 kernel/drivers/devfreq/governor_performance.ko
 kernel/drivers/devfreq/governor_powersave.ko
@@ -526,6 +527,7 @@ kernel/net/netfilter/xt_TRACE.ko
 kernel/net/netfilter/xt_IDLETIMER.ko
 kernel/net/netfilter/xt_bpf.ko
 kernel/net/netfilter/xt_comment.ko
+kernel/net/netfilter/xt_connbytes.ko
 kernel/net/netfilter/xt_connlimit.ko
 kernel/net/netfilter/xt_conntrack.ko
 kernel/net/netfilter/xt_dscp.ko
