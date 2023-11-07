@@ -1,3 +1,4 @@
+kernel/kernel/kheaders.ko
 kernel/mm/zsmalloc.ko
 kernel/crypto/michael_mic.ko
 kernel/lib/crypto/libarc4.ko
@@ -85,6 +86,7 @@ kernel/drivers/net/wireless/ath/ath11k/ath11k.ko
 kernel/drivers/net/wireless/ath/ath11k/ath11k_ahb.ko
 kernel/drivers/net/wireless/ath/ath11k/ath11k_pci.ko
 kernel/drivers/net/wireless/ath/ath.ko
+kernel/drivers/net/macsec.ko
 kernel/drivers/net/mii.ko
 kernel/drivers/net/can/dev/can-dev.ko
 kernel/drivers/net/can/spi/mcp251xfd/mcp251xfd.ko
@@ -97,6 +99,7 @@ kernel/drivers/net/ppp/ppp_mppe.ko
 kernel/drivers/net/ppp/pppox.ko
 kernel/drivers/net/ppp/pptp.ko
 kernel/drivers/net/slip/slhc.ko
+kernel/drivers/net/wwan/wwan.ko
 kernel/drivers/net/usb/rtl8150.ko
 kernel/drivers/net/usb/r8152.ko
 kernel/drivers/net/usb/asix.ko
@@ -128,6 +131,8 @@ kernel/drivers/i2c/i2c-mux.ko
 kernel/drivers/media/platform/qcom/venus/venus-core.ko
 kernel/drivers/media/platform/qcom/venus/venus-dec.ko
 kernel/drivers/media/platform/qcom/venus/venus-enc.ko
+kernel/drivers/ptp/ptp.ko
+kernel/drivers/ptp/ptp_kvm.ko
 kernel/drivers/power/reset/qcom-pon.ko
 kernel/drivers/power/reset/reboot-mode.ko
 kernel/drivers/power/reset/syscon-reboot-mode.ko
@@ -162,6 +167,7 @@ kernel/drivers/rpmsg/qcom_smd.ko
 kernel/drivers/extcon/extcon-usb-gpio.ko
 kernel/drivers/iio/adc/qcom-spmi-adc5.ko
 kernel/drivers/iio/adc/qcom-vadc-common.ko
+kernel/drivers/android/memhealth.ko
 kernel/drivers/nvmem/nvmem_qfprom.ko
 kernel/drivers/interconnect/qcom/icc-bcm-voter.ko
 kernel/drivers/interconnect/qcom/icc-osm-l3.ko
@@ -171,6 +177,7 @@ kernel/drivers/interconnect/qcom/qnoc-sm8250.ko
 kernel/drivers/interconnect/qcom/qnoc-sm8450.ko
 kernel/drivers/slimbus/slimbus.ko
 kernel/drivers/slimbus/slim-qcom-ngd-ctrl.ko
+kernel/drivers/pps/pps_core.ko
 kernel/drivers/bluetooth/hci_uart.ko
 kernel/drivers/bluetooth/btsdio.ko
 kernel/drivers/bluetooth/btbcm.ko
