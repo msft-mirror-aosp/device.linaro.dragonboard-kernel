@@ -1,5 +1,4 @@
 kernel/arch/arm64/kvm/kvm.ko
-kernel/arch/arm64/gunyah/gunyah_hypercall.ko
 kernel/arch/arm64/crypto/sha2-ce.ko
 kernel/arch/arm64/crypto/sha512-ce.ko
 kernel/arch/arm64/crypto/ghash-ce.ko
@@ -11,7 +10,6 @@ kernel/arch/arm64/crypto/sha512-arm64.ko
 kernel/arch/arm64/crypto/chacha-neon.ko
 kernel/arch/arm64/crypto/poly1305-neon.ko
 kernel/kernel/configs.ko
-kernel/kernel/kheaders.ko
 kernel/fs/binfmt_misc.ko
 kernel/fs/binfmt_script.ko
 kernel/fs/binfmt_elf.ko
@@ -82,7 +80,6 @@ kernel/fs/nls/mac-turkish.ko
 kernel/fs/unicode/unicode.ko
 kernel/fs/unicode/utf8data.ko
 kernel/fs/fuse/fuse.ko
-kernel/fs/fuse/virtiofs.ko
 kernel/fs/overlayfs/overlay.ko
 kernel/fs/incfs/incrementalfs.ko
 kernel/fs/f2fs/f2fs.ko
@@ -269,11 +266,12 @@ kernel/drivers/dma-buf/heaps/page_pool.ko
 kernel/drivers/scsi/scsi_mod.ko
 kernel/drivers/scsi/scsi_common.ko
 kernel/drivers/scsi/sd_mod.ko
+kernel/drivers/nvme/host/nvme-core.ko
+kernel/drivers/nvme/host/nvme.ko
 kernel/drivers/spmi/spmi.ko
 kernel/drivers/net/dummy.ko
 kernel/drivers/net/wireguard/wireguard.ko
 kernel/drivers/net/ifb.ko
-kernel/drivers/net/macsec.ko
 kernel/drivers/net/phy/mdio_devres.ko
 kernel/drivers/net/phy/phylink.ko
 kernel/drivers/net/phy/libphy.ko
@@ -315,8 +313,6 @@ kernel/drivers/usb/gadget/function/usb_f_uac2.ko
 kernel/drivers/usb/gadget/function/usb_f_uvc.ko
 kernel/drivers/usb/gadget/function/usb_f_midi.ko
 kernel/drivers/usb/gadget/function/usb_f_hid.ko
-kernel/drivers/usb/gadget/function/usb_f_accessory.ko
-kernel/drivers/usb/gadget/function/usb_f_audio_source.ko
 kernel/drivers/usb/typec/typec.ko
 kernel/drivers/usb/typec/altmodes/typec_displayport.ko
 kernel/drivers/usb/typec/tcpm/tcpm.ko
@@ -342,6 +338,8 @@ kernel/drivers/i2c/algos/i2c-algo-bit.ko
 kernel/drivers/i3c/i3c.ko
 kernel/drivers/media/i2c/ir-kbd-i2c.ko
 kernel/drivers/media/mc/mc.ko
+kernel/drivers/media/v4l2-core/v4l2-async.ko
+kernel/drivers/media/v4l2-core/v4l2-fwnode.ko
 kernel/drivers/media/v4l2-core/v4l2-mem2mem.ko
 kernel/drivers/media/v4l2-core/v4l2-dv-timings.ko
 kernel/drivers/media/v4l2-core/videodev.ko
@@ -355,9 +353,6 @@ kernel/drivers/media/common/videobuf2/videobuf2-v4l2.ko
 kernel/drivers/media/common/videobuf2/videobuf2-vmalloc.ko
 kernel/drivers/media/usb/gspca/gspca_main.ko
 kernel/drivers/media/usb/uvc/uvcvideo.ko
-kernel/drivers/pps/pps_core.ko
-kernel/drivers/ptp/ptp.ko
-kernel/drivers/ptp/ptp_kvm.ko
 kernel/drivers/power/supply/power_supply.ko
 kernel/drivers/thermal/hisi_thermal.ko
 kernel/drivers/watchdog/watchdog.ko
@@ -429,22 +424,13 @@ kernel/drivers/hid/hid-uclogic.ko
 kernel/drivers/hid/wacom.ko
 kernel/drivers/hid/hid-wiimote.ko
 kernel/drivers/hid/usbhid/usbhid.ko
-kernel/drivers/vhost/vhost_vsock.ko
-kernel/drivers/vhost/vhost.ko
-kernel/drivers/vhost/vhost_iotlb.ko
 kernel/drivers/mailbox/hi3660-mailbox.ko
 kernel/drivers/mailbox/hi6220-mailbox.ko
-kernel/drivers/mailbox/gunyah-msgq.ko
 kernel/drivers/mailbox/sun6i-msgbox.ko
 kernel/drivers/hwspinlock/hwspinlock_core.ko
 kernel/drivers/remoteproc/remoteproc.ko
 kernel/drivers/rpmsg/rpmsg_core.ko
 kernel/drivers/rpmsg/rpmsg_char.ko
-kernel/drivers/virt/gunyah/gunyah_platform_hooks.ko
-kernel/drivers/virt/gunyah/gunyah.ko
-kernel/drivers/virt/gunyah/gunyah_vcpu.ko
-kernel/drivers/virt/gunyah/gunyah_irqfd.ko
-kernel/drivers/virt/gunyah/gunyah_ioeventfd.ko
 kernel/drivers/devfreq/governor_simpleondemand.ko
 kernel/drivers/devfreq/governor_performance.ko
 kernel/drivers/devfreq/governor_powersave.ko
@@ -544,6 +530,7 @@ kernel/net/netfilter/xt_TRACE.ko
 kernel/net/netfilter/xt_IDLETIMER.ko
 kernel/net/netfilter/xt_bpf.ko
 kernel/net/netfilter/xt_comment.ko
+kernel/net/netfilter/xt_connbytes.ko
 kernel/net/netfilter/xt_connlimit.ko
 kernel/net/netfilter/xt_conntrack.ko
 kernel/net/netfilter/xt_dscp.ko
@@ -628,8 +615,4 @@ kernel/net/ipv6/ip6_udp_tunnel.ko
 kernel/net/packet/af_packet.ko
 kernel/net/key/af_key.ko
 kernel/net/bridge/bridge.ko
-kernel/net/vmw_vsock/vsock.ko
-kernel/net/vmw_vsock/vsock_diag.ko
-kernel/net/vmw_vsock/vmw_vsock_virtio_transport_common.ko
-kernel/net/vmw_vsock/vsock_loopback.ko
 kernel/virt/lib/irqbypass.ko

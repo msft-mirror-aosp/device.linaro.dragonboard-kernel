@@ -1,3 +1,4 @@
+drivers/android/memhealth.ko
 drivers/bluetooth/btbcm.ko
 drivers/bluetooth/btqca.ko
 drivers/bluetooth/btsdio.ko
@@ -5,6 +6,7 @@ drivers/bluetooth/hci_uart.ko
 drivers/net/can/dev/can-dev.ko
 drivers/net/can/slcan/slcan.ko
 drivers/net/can/vcan.ko
+drivers/net/macsec.ko
 drivers/net/mii.ko
 drivers/net/ppp/bsd_comp.ko
 drivers/net/ppp/ppp_deflate.ko
@@ -23,6 +25,10 @@ drivers/net/usb/r8152.ko
 drivers/net/usb/r8153_ecm.ko
 drivers/net/usb/rtl8150.ko
 drivers/net/usb/usbnet.ko
+drivers/net/wwan/wwan.ko
+drivers/pps/pps_core.ko
+drivers/ptp/ptp.ko
+drivers/ptp/ptp_kvm.ko
 drivers/usb/class/cdc-acm.ko
 drivers/usb/serial/ftdi_sio.ko
 drivers/usb/serial/usbserial.ko
