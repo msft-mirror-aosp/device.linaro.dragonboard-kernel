@@ -1,7 +1,8 @@
+kernel/kernel/kheaders.ko
 kernel/mm/zsmalloc.ko
 kernel/crypto/michael_mic.ko
 kernel/drivers/irqchip/qcom-pdc.ko
-kernel/drivers/bus/mhi/core/mhi.ko
+kernel/drivers/bus/mhi/host/mhi.ko
 kernel/drivers/phy/qualcomm/phy-qcom-qmp.ko
 kernel/drivers/phy/qualcomm/phy-qcom-qusb2.ko
 kernel/drivers/phy/qualcomm/phy-qcom-usb-hs.ko
@@ -56,6 +57,7 @@ kernel/drivers/gpu/drm/msm/msm.ko
 kernel/drivers/base/regmap/regmap-slimbus.ko
 kernel/drivers/base/regmap/regmap-sdw.ko
 kernel/drivers/block/zram/zram.ko
+kernel/drivers/block/null_blk/null_blk.ko
 kernel/drivers/misc/fastrpc.ko
 kernel/drivers/mfd/wcd934x.ko
 kernel/drivers/mfd/qcom-spmi-pmic.ko
