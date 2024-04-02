@@ -1,2 +1,2 @@
-certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.6.0-mainline-g2534b5ca8dfe-ab11029583
-kernel_release=6.6.0-mainline-g2534b5ca8dfe-ab11029583
+certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.8.0-mainline-g830a3b57edc6-ab11649714
+kernel_release=6.8.0-mainline-g830a3b57edc6-ab11649714
