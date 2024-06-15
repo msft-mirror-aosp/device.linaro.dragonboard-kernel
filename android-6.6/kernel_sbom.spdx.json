@@ -2,13 +2,13 @@
     "spdxVersion": "SPDX-2.3",
     "dataLicense": "CC0-1.0",
     "SPDXID": "SPDXRef-DOCUMENT",
-    "name": "6.6.17-android15-1-gaa67823ffd3c-ab11617304",
-    "documentNamespace": "https://www.google.com/sbom/spdx/android/kernel/6.6.17-android15-1-gaa67823ffd3c-ab11617304",
+    "name": "6.6.30-android15-7-gbb616d66d8a9-ab11968886-4k",
+    "documentNamespace": "https://www.google.com/sbom/spdx/android/kernel/6.6.30-android15-7-gbb616d66d8a9-ab11968886-4k",
     "creationInfo": {
         "creators": [
             "Organization: Google"
         ],
-        "created": "2024-03-22T22:09:10Z"
+        "created": "2024-06-14T00:21:44Z"
     },
     "documentDescribes": [
         "SPDXRef-kernel"
@@ -19,17 +19,18 @@
             "SPDXID": "SPDXRef-kernel",
             "downloadLocation": "https://source.android.com",
             "filesAnalyzed": true,
-            "versionInfo": "6.6.17-android15-1-gaa67823ffd3c-ab11617304",
+            "versionInfo": "6.6.30-android15-7-gbb616d66d8a9-ab11968886-4k",
             "supplier": "Organization: Google",
             "hasFiles": [
                 "6lowpan.ko",
                 "8021q.ko",
+                "9pnet.ko",
+                "9pnet_fd.ko",
                 "Image",
                 "Image.gz",
                 "Image.lz4",
                 "System.map",
                 "abi_symbollist",
-                "abi_symbollist.report",
                 "aqc111.ko",
                 "asix.ko",
                 "ax88179_178a.ko",
@@ -48,12 +49,13 @@
                 "can-gw.ko",
                 "can-raw.ko",
                 "can.ko",
+                "cctrng.ko",
                 "cdc-acm.ko",
                 "cdc_eem.ko",
                 "cdc_ether.ko",
                 "cdc_ncm.ko",
-                "cfg80211.ko",
                 "diag.ko",
+                "download_configs.json",
                 "ftdi_sio.ko",
                 "gki-info.txt",
                 "gki_certification_tools.tar.gz",
@@ -63,9 +65,11 @@
                 "ieee802154.ko",
                 "ieee802154_6lowpan.ko",
                 "ieee802154_socket.ko",
+                "init_ddk.zip",
                 "kernel-headers.tar.gz",
                 "kernel-uapi-headers.tar.gz",
                 "kernel_aarch64_Module.symvers",
+                "kernel_aarch64_ddk_headers_archive.tar.gz",
                 "kernel_aarch64_filegroup_decl.tar.gz",
                 "kernel_aarch64_kmi_symbol_list_violations_checked",
                 "kheaders.ko",
@@ -73,7 +77,6 @@
                 "l2tp_core.ko",
                 "l2tp_ppp.ko",
                 "libarc4.ko",
-                "mac80211.ko",
                 "mac802154.ko",
                 "macsec.ko",
                 "mii.ko",
@@ -87,6 +90,7 @@
                 "nhc_mobility.ko",
                 "nhc_routing.ko",
                 "nhc_udp.ko",
+                "open-dice.ko",
                 "ppp_deflate.ko",
                 "ppp_generic.ko",
                 "ppp_mppe.ko",
@@ -109,20 +113,29 @@
                 "system_dlkm.modules.blocklist",
                 "system_dlkm.modules.load",
                 "system_dlkm_staging_archive.tar.gz",
+                "test_mappings.zip",
+                "tests.zip",
                 "tipc.ko",
-                "toolchain_version",
                 "unstripped_modules.tar.gz",
+                "usbmon.ko",
                 "usbnet.ko",
                 "usbserial.ko",
                 "vcan.ko",
+                "vcpu_stall_detector.ko",
+                "virtio_balloon.ko",
+                "virtio_blk.ko",
+                "virtio_console.ko",
+                "virtio_pci.ko",
+                "virtio_pci_modern_dev.ko",
                 "vmlinux",
                 "vmlinux.symvers",
+                "vmw_vsock_virtio_transport.ko",
                 "wwan.ko",
                 "zram.ko",
                 "zsmalloc.ko"
             ],
             "packageVerificationCode": {
-                "packageVerificationCodeValue": "8ddfe099e0e6daa599a27e6cc097687a4ad65934"
+                "packageVerificationCodeValue": "0520843de815d000f1e44ee8989b93e354d34f99"
             }
         },
         {
@@ -130,7 +143,7 @@
             "SPDXID": "SPDXRef-KernelSourceCode",
             "downloadLocation": "https://source.android.com",
             "filesAnalyzed": false,
-            "versionInfo": "6.6.17-android15-1-gaa67823ffd3c-ab11617304",
+            "versionInfo": "6.6.30-android15-7-gbb616d66d8a9-ab11968886-4k",
             "supplier": "Organization: Google"
         },
         {
@@ -138,7 +151,7 @@
             "SPDXID": "SPDXRef-LinuxUpstreamPackage",
             "downloadLocation": "https://www.kernel.org",
             "filesAnalyzed": false,
-            "versionInfo": "6.6.17",
+            "versionInfo": "6.6.30",
             "supplier": "Organization: The Linux Kernel Organization"
         }
     ],
@@ -149,7 +162,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "3b4e1350c84c99fc46fd70a70ee1538438e66b1c"
+                    "checksumValue": "477529148c9cecb4c53b1d4e3c35023c58b7f566"
                 }
             ]
         },
@@ -159,7 +172,27 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "11868865a41319eaf17c2f67e4223ceff3340d5b"
+                    "checksumValue": "f74d0bf1b46e6eda0440b5b90cd816ec5c452144"
+                }
+            ]
+        },
+        {
+            "fileName": "9pnet.ko",
+            "SPDXID": "SPDXRef-9pnet.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "303845a2dc1b42b0396d9d6d7199f04082371df5"
+                }
+            ]
+        },
+        {
+            "fileName": "9pnet_fd.ko",
+            "SPDXID": "SPDXRef-9pnet_fd.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "db435c77a8f30cce59f061f81d50beac8ee42e6c"
                 }
             ]
         },
@@ -169,7 +202,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "2db529432d8c443b45c02902507919ad8cf08475"
+                    "checksumValue": "60f6441703208996b9e8d34874a14c3858a516d4"
                 }
             ]
         },
@@ -179,7 +212,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "ee2119d8cc9b863998a65717b2a2b5c9567e348d"
+                    "checksumValue": "6285e8e2cf181d482059ab3dcc1ac07e599ca273"
                 }
             ]
         },
@@ -189,7 +222,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "4059b869bbe18473589add5f315dbf41faeb3d7c"
+                    "checksumValue": "61d635999f2cf111ff3fe4fa605de758d3ce04f2"
                 }
             ]
         },
@@ -199,7 +232,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "e42023b1a57643d190844ff94eba054cfb84337f"
+                    "checksumValue": "67fa798c8319b630a307cfefa77af8c3d9a8fe9e"
                 }
             ]
         },
@@ -209,17 +242,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "c15b0ca8dd1ddb293ceea7325b02caaf9550b0d7"
-                }
-            ]
-        },
-        {
-            "fileName": "abi_symbollist.report",
-            "SPDXID": "SPDXRef-abi_symbollist.report",
-            "checksums": [
-                {
-                    "algorithm": "SHA1",
-                    "checksumValue": "12d2ca59d6d58f48c2df56952a46a1b76d117fcc"
+                    "checksumValue": "e60e3400bc108cc276c1140d4b60c44ed147f264"
                 }
             ]
         },
@@ -229,7 +252,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "9de1b70b7ce60406157de608999c74cbdb59fffc"
+                    "checksumValue": "c79b94656222851d39cb6c8ab026df5ff28a83dd"
                 }
             ]
         },
@@ -239,7 +262,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "37d2a6c115463a4c830903a1748f3a275b473c2d"
+                    "checksumValue": "01d541cb834982d2b9a8f2cfb47fa8581bbfdf49"
                 }
             ]
         },
@@ -249,7 +272,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "98feac48d6d84e6cfbc129108145f751bc9cc500"
+                    "checksumValue": "5d7c128bc88345e7a956f7298210c808cee77d70"
                 }
             ]
         },
@@ -259,7 +282,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "467932623f8272a4eacec55b1bee87a8aab9c884"
+                    "checksumValue": "1452e1ea9cafe7995a0da63a303978552a73abf3"
                 }
             ]
         },
@@ -269,7 +292,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "1d62e7a5627547fd6aec5161cf1a71652e17d242"
+                    "checksumValue": "db86d225358105cb73bf049ea3a26d5dd6793c98"
                 }
             ]
         },
@@ -279,7 +302,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "6ba98bdfb586943816a9ae75b7c659b424c813a3"
+                    "checksumValue": "bdff3aa869cab6ae26bf25ff81410783994cb171"
                 }
             ]
         },
@@ -289,7 +312,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "002832da0d19a85ee5fa2ac391099747a61b2888"
+                    "checksumValue": "aee80c4cf3f4dfba4f56f656c03789e6eeb66c51"
                 }
             ]
         },
@@ -299,7 +322,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "033cd7720d2f14607686410c3fd3e4842e8e2b25"
+                    "checksumValue": "ae06c5f8576335ea522670048abe13e0c5916e64"
                 }
             ]
         },
@@ -309,7 +332,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "15756a7ace2efc627317c0631563cb85eabe87c5"
+                    "checksumValue": "5f9a5d154bb403392b8f8592b01293dd36d0e91a"
                 }
             ]
         },
@@ -319,7 +342,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "4de26601bb90d2154e029277aa2b5513043ed20a"
+                    "checksumValue": "ed266e2e2b106cfadad82de27ce2c6b84e961fc1"
                 }
             ]
         },
@@ -329,7 +352,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "795fd07616b3cdd14ac23a4d29da2802fd629e2d"
+                    "checksumValue": "4932758419ea598afd5f0ce632066be7ac0935a9"
                 }
             ]
         },
@@ -339,7 +362,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "28912b73253339cf486040ec928e8f1b5744d811"
+                    "checksumValue": "7f74cf24952c73d77bed2cc6110225c39d59ce6c"
                 }
             ]
         },
@@ -349,7 +372,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "9d2745aefd273dab82cabe0f225a82663ca557e9"
+                    "checksumValue": "df18b3ba7d15684772d4170e30b22d7ce94b7cbc"
                 }
             ]
         },
@@ -359,7 +382,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "576399bb32d19c9cc149f8159ad5529bb327d7b0"
+                    "checksumValue": "a6a871894705c0a99c262b31811ed0b92e0f67f8"
                 }
             ]
         },
@@ -369,7 +392,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "e14f602927f6042da6d8622a895a19e69b9fa4da"
+                    "checksumValue": "8848a9f79c7456701b79cccd426201cef96e4db5"
                 }
             ]
         },
@@ -379,7 +402,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "e766590c320b4771cf0bc37ad05bf9dc6f99ed68"
+                    "checksumValue": "806d5cdbc43c268e8ce421294f1dedfe988e0249"
                 }
             ]
         },
@@ -389,7 +412,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "50923efed0629bef18b40e6f480a48a7226bbf77"
+                    "checksumValue": "d57ead5b42c57eae20b05065f037f0680fd1573c"
                 }
             ]
         },
@@ -399,7 +422,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "5c00e5d8ea1fcfc3bdcb47042319861b960854a9"
+                    "checksumValue": "a96603311fefd75c6e9e5796d4e315d175772d2f"
+                }
+            ]
+        },
+        {
+            "fileName": "cctrng.ko",
+            "SPDXID": "SPDXRef-cctrng.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "967c0b0e32189f774b13ec3a9d9b7132789a9f0b"
                 }
             ]
         },
@@ -409,7 +442,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "cf18f847090c97791fa34f88faf1cfe7d788ffe9"
+                    "checksumValue": "73510d4a6c92714324a471191d048cc80dcf3808"
                 }
             ]
         },
@@ -419,7 +452,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "7b12516bd014249590940ffaac1ffcd6015298e3"
+                    "checksumValue": "fcc0f1073f82b4800e0b7763881d049a8ffd36d6"
                 }
             ]
         },
@@ -429,7 +462,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "93c6e3f9dd4d465084184fc987209aec14e38bed"
+                    "checksumValue": "0ad6348586c20f023edff96d86e0054129a22a4b"
                 }
             ]
         },
@@ -439,17 +472,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "02b7dcfb3c49a8a59b684062a24a137487f2a9e9"
-                }
-            ]
-        },
-        {
-            "fileName": "cfg80211.ko",
-            "SPDXID": "SPDXRef-cfg80211.ko",
-            "checksums": [
-                {
-                    "algorithm": "SHA1",
-                    "checksumValue": "bc44dd0b9287e6e683aefc8d60181d794dbf69ef"
+                    "checksumValue": "d28dd9380f8199bdf8e68d42d2fdeacc3f7181f5"
                 }
             ]
         },
@@ -459,7 +482,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8c7f85731353d947152b733c5ceb040e05bfee1b"
+                    "checksumValue": "7c613e27014e8a06d8462e27775d881baf7fcfc0"
+                }
+            ]
+        },
+        {
+            "fileName": "download_configs.json",
+            "SPDXID": "SPDXRef-download_configs.json",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "43ca3a72c520efb20a2c1b8b24e3eff5740e1ee9"
                 }
             ]
         },
@@ -469,7 +502,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "ed929c9997e052cf9e5f7244c20665862181226b"
+                    "checksumValue": "3d5bc35a3bc1f1e9d32282cf17d5e44838e3854d"
                 }
             ]
         },
@@ -479,7 +512,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8d73b714a83ec2c534e665c0c2644e12ed5217bf"
+                    "checksumValue": "1436b7dba01d54291e0b0db14d139357d424ed81"
                 }
             ]
         },
@@ -489,7 +522,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "5459e886d0c336e044afe22f7e6f18533efb3456"
+                    "checksumValue": "7e037a4f90baf687ea404de85f15c770988ea9d0"
                 }
             ]
         },
@@ -499,7 +532,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "09606d6d5e5ab9a4ad8dabfd702be21bbdb19f33"
+                    "checksumValue": "2d9531eb5620010bb803273947433edcc3080a8a"
                 }
             ]
         },
@@ -509,7 +542,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "c616f32e5dbb4f8c12ae353bb551df5570a78f11"
+                    "checksumValue": "fb59f5fe8b70529dc3c53bd028f98fe28590ceb6"
                 }
             ]
         },
@@ -519,7 +552,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "76c668679bc4aa217e93aa06adc5c0bfd7b50c1d"
+                    "checksumValue": "7f7821d1d3f74a18e59b49753fc87ac99e5877db"
                 }
             ]
         },
@@ -529,7 +562,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "81af7fef1a66b24bb12d12132639738c4b15161f"
+                    "checksumValue": "96f83c1c981fe49ef1e91cc9d5c54cdfd9806578"
                 }
             ]
         },
@@ -539,7 +572,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "5ccf5edb42a9d04c8c1527c8c7566d6edc42b1a0"
+                    "checksumValue": "20796d72a75141a8de8905c0ceb1e9314ef071e6"
                 }
             ]
         },
@@ -549,7 +582,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8636ef29cde6f70f0386a5cd25a5c2fe40de2c29"
+                    "checksumValue": "885b357b33847044e3c4fd8e649b4a3bc5f0bc0e"
+                }
+            ]
+        },
+        {
+            "fileName": "init_ddk.zip",
+            "SPDXID": "SPDXRef-init_ddk.zip",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "87229ad15009121298e3c97e9246c5a5d6250d86"
                 }
             ]
         },
@@ -559,7 +602,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "fa3dfb3c4bb69ea777489ec046179027ce5c59be"
+                    "checksumValue": "3b468d0a1d68603690307360a89ad45bb42e5b7a"
                 }
             ]
         },
@@ -569,7 +612,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "21bd26a6c032d98e9c7d29fad4a2b7ea0dbb9bd3"
+                    "checksumValue": "060a633c1a644920cfad349bf250858073ede1e4"
                 }
             ]
         },
@@ -579,7 +622,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "04f195e82ce08914834a07b651f7a55747ed159f"
+                    "checksumValue": "9152eedd3aab8e58ddaca25835f4912c66c036cd"
+                }
+            ]
+        },
+        {
+            "fileName": "kernel_aarch64_ddk_headers_archive.tar.gz",
+            "SPDXID": "SPDXRef-kernel_aarch64_ddk_headers_archive.tar.gz",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "b2453e5360c7acf8466069b837d2114d5bbae218"
                 }
             ]
         },
@@ -589,7 +642,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "3cff94fd314c3de1d19f93c38f50308afab02ae3"
+                    "checksumValue": "efae9b9b0ca8ffacb18663dde86bb72a63930c13"
                 }
             ]
         },
@@ -609,7 +662,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "1bb20186d3c214c9452a3729a7bce36741397933"
+                    "checksumValue": "398ff61f5c46e3739fada048acbb3d5485797959"
                 }
             ]
         },
@@ -629,7 +682,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "cae9cab8f5695df5401bd29d52aea94ec6c633c0"
+                    "checksumValue": "ceaf2b684316d8234bb7da3295ffbd06d80855c5"
                 }
             ]
         },
@@ -639,7 +692,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "95c5fe722a38fa0150ae068fe02aa8d756294900"
+                    "checksumValue": "bb6dda7f696fbe6d045b20e135a2d6599e7fc87d"
                 }
             ]
         },
@@ -649,17 +702,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "b35502236f590478d578cf624d23ea82a0be97f6"
-                }
-            ]
-        },
-        {
-            "fileName": "mac80211.ko",
-            "SPDXID": "SPDXRef-mac80211.ko",
-            "checksums": [
-                {
-                    "algorithm": "SHA1",
-                    "checksumValue": "9124b2ad3d9657b3567526605302f50d78049b1f"
+                    "checksumValue": "2ad4e865537d1de3e556d577994d1e6e859b8c0a"
                 }
             ]
         },
@@ -669,7 +712,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "7c2949486aea4d4ba5baaa3fbe91e8a78b3969c3"
+                    "checksumValue": "4e7c79abd3dc0110185f9d30bbd24445182bb72d"
                 }
             ]
         },
@@ -679,7 +722,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8ff472e709654b479de733324163ea4c9888ae76"
+                    "checksumValue": "ef22bd9c1af5dfa8dffa3e1736b35abf57104a35"
                 }
             ]
         },
@@ -689,7 +732,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "e0fe22519e60b6567258d3015c0135efda4266ef"
+                    "checksumValue": "026ab32b8ed6cabea66dc961232a2549cc0f7f35"
                 }
             ]
         },
@@ -699,7 +742,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f8576ca6ee6f6033ae805f2ff1b1beb238e12be3"
+                    "checksumValue": "4f9df6be8d175a5b8791794c63acde94907c06d3"
                 }
             ]
         },
@@ -709,7 +752,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f81a44993c40d7b9776fe3740eccdb2ca92cd3a0"
+                    "checksumValue": "fb0c52e8cd7267fd243c25895e46ef0aebe5a3b2"
                 }
             ]
         },
@@ -719,7 +762,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f7b89866f04bf7256f926b83df0c8db4ff93d871"
+                    "checksumValue": "0facff461dee8ac3e892905d642926dd926c1567"
                 }
             ]
         },
@@ -729,7 +772,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "5a8dba31660d7a54f5db11b17ea3cc5885de30fb"
+                    "checksumValue": "0f971ad255604db02fa5937d831c18da25d6e5f0"
                 }
             ]
         },
@@ -739,7 +782,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "ba9db322a05baef3825ae52b6bded476709be920"
+                    "checksumValue": "93f3753a32bb6ba5d49120366a7c3f602b83fadd"
                 }
             ]
         },
@@ -749,7 +792,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8b1978e1e0575d97152e7506351d0be5033ac150"
+                    "checksumValue": "331360ec35568446066181c0e2f7ccdb9270dc7f"
                 }
             ]
         },
@@ -759,7 +802,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f1b407587661304850397c92fc119f6498618a5d"
+                    "checksumValue": "68d4ccfe4cd0ca60321f12de41ba56a0965a4a56"
                 }
             ]
         },
@@ -769,7 +812,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d46cd27e876dfc81f34e46cc9193d8e33230def7"
+                    "checksumValue": "6fc0053d6e85abcf7f44133b421d447d86c22b70"
                 }
             ]
         },
@@ -779,7 +822,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "000188bdf850200665c6f0604b7adb9271db10b2"
+                    "checksumValue": "caa3c712521fe18be71aa9dbb6801021cc519539"
                 }
             ]
         },
@@ -789,7 +832,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "3754fa694abcc45852196b3a58249c2d543a5ef6"
+                    "checksumValue": "4e343d1246aba4165d6e0aca0b256384f997378e"
+                }
+            ]
+        },
+        {
+            "fileName": "open-dice.ko",
+            "SPDXID": "SPDXRef-open-dice.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "cb497a5bd0477aae8c2148192db67be6c2bd6204"
                 }
             ]
         },
@@ -799,7 +852,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "b5bfe859ba87f6e2a7dffaf9a439764becd79578"
+                    "checksumValue": "e24a7a03cdac324d80b3a06110ccce7f7c52023b"
                 }
             ]
         },
@@ -809,7 +862,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "362dde3ccf3834da8fdf839ed796cb34a81d3c2a"
+                    "checksumValue": "08de7ce33fa56e7747d94e7857a9aa5c06e51bb6"
                 }
             ]
         },
@@ -819,7 +872,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "844342443fb0192cabeb7411c42643714d02a621"
+                    "checksumValue": "e4a778521477d02329e0a1a883f1e18e972e887e"
                 }
             ]
         },
@@ -829,7 +882,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "1706148ec0f298a9c6096b974c8431686f463e82"
+                    "checksumValue": "5f04c9a63bd51ec1d295067d9be51135cdee15e0"
                 }
             ]
         },
@@ -839,7 +892,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d2d566e25bde4fdef1cf9503ac06071b3b0e0427"
+                    "checksumValue": "c42d5a872a6f982441a547622f38ff5a8ed09aec"
                 }
             ]
         },
@@ -849,7 +902,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "02f0dd2e7c192683af37ea197708f746ab38457f"
+                    "checksumValue": "94028864c35f938d528498be7dce7efecdf7061f"
                 }
             ]
         },
@@ -859,7 +912,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "c24d7621378dc34f8415a07ffe98d0ad8e5f4fe8"
+                    "checksumValue": "207675c6ba0c8c2a4e8168e35c41b8fd8d9bdbe7"
                 }
             ]
         },
@@ -869,7 +922,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "89ea777d9891dbbce7b987746212558bac601662"
+                    "checksumValue": "f1fe90717c1932280ade190e8fb4b9f27b57f782"
                 }
             ]
         },
@@ -879,7 +932,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "102e5df87d6e442951999859ec816e52d8538396"
+                    "checksumValue": "4a51273e64170ea5d9cdb06f25e49da0d7875fdd"
                 }
             ]
         },
@@ -889,7 +942,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d675621324e8db3990686389ce2f2cb0d715f75c"
+                    "checksumValue": "2175dece84e351c6076db89d00eb4d2df341bb5b"
                 }
             ]
         },
@@ -899,7 +952,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "c8c396e9b7d5b1f2f929c3047e37eee02c15f213"
+                    "checksumValue": "14cb79d4e2154ae1b54059832fd3f4ef701d3b29"
                 }
             ]
         },
@@ -909,7 +962,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "39db1ef5ce29574f7d38b35624dff3091663e222"
+                    "checksumValue": "a82c32881b424b938ea4161b7e4c5cd8f6d5ec85"
                 }
             ]
         },
@@ -919,7 +972,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "c8da2e78670a8cdb19e3c58ec1948e74a598cb50"
+                    "checksumValue": "7c6de7958d5b728739f6bcb1f4985f2e87d1de94"
                 }
             ]
         },
@@ -929,7 +982,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "0dce5d3e0b8f18ea3819563eb2f1287012e84fad"
+                    "checksumValue": "e8f143acd2ba60fb42d8c6a96bc5b575c54acbe1"
                 }
             ]
         },
@@ -939,7 +992,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f7454ea309fb2536b4dfc324f8f21b5e9b68704c"
+                    "checksumValue": "00c1dc04ed8aaeead976c17ba60cac31e55f05d4"
                 }
             ]
         },
@@ -949,7 +1002,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "a1626c1c82368b72856f4f6c393eccd47fc7b5af"
+                    "checksumValue": "5eb3d86c04b22c987c998d840e7d5a4c7a9a240b"
                 }
             ]
         },
@@ -959,7 +1012,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "7cb99171fd95b59d0a5a24d2539139cae9271944"
+                    "checksumValue": "d83b0bbef267b30d5d03adc0984d90e74525ce1a"
                 }
             ]
         },
@@ -969,7 +1022,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "ef722f8c16ec21aef8174ac2501f5ee6c214cb62"
+                    "checksumValue": "b8aa312f3851c5a778219f56fc9d2944caa43990"
                 }
             ]
         },
@@ -979,7 +1032,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "55bd39052f4d948b2fb164e41287bafa96b83ff0"
+                    "checksumValue": "62c2152cfbd84705848c732e0309e7ea032e9c3a"
                 }
             ]
         },
@@ -999,7 +1052,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "786bdef6dca7be2ef497d2b7b6056d26e5586e2c"
+                    "checksumValue": "9fdc97a82a6b274687309da7f88936923488f1e0"
                 }
             ]
         },
@@ -1009,7 +1062,27 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "b1874ec608ea0e74967170f2547893263c2c20be"
+                    "checksumValue": "0be9ef938fe0a28931315f7203c1776a92653d0f"
+                }
+            ]
+        },
+        {
+            "fileName": "test_mappings.zip",
+            "SPDXID": "SPDXRef-test_mappings.zip",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "bf35665eaf51959f297d6e4417128469516afd12"
+                }
+            ]
+        },
+        {
+            "fileName": "tests.zip",
+            "SPDXID": "SPDXRef-tests.zip",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "034d2fe5b101d4ef7881c218b60c1ff715947235"
                 }
             ]
         },
@@ -1019,17 +1092,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "759984664968df7f480d20ff8580fb3f9ce892d4"
-                }
-            ]
-        },
-        {
-            "fileName": "toolchain_version",
-            "SPDXID": "SPDXRef-toolchain_version",
-            "checksums": [
-                {
-                    "algorithm": "SHA1",
-                    "checksumValue": "63c2997caa3c5e65a3ad40e20d119cd44045b0ac"
+                    "checksumValue": "577490c1ec93d06a52ca32432d31fa7445db56ba"
                 }
             ]
         },
@@ -1039,7 +1102,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "45ccc760592b232d76c19cf2746ea7e55ba6ad4a"
+                    "checksumValue": "a84c7c829fe431488ab2542f97c54829fbcac958"
+                }
+            ]
+        },
+        {
+            "fileName": "usbmon.ko",
+            "SPDXID": "SPDXRef-usbmon.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "2218ee09a7c4ae52a46ba2bb590f9b7b4d082a8f"
                 }
             ]
         },
@@ -1049,7 +1122,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8f65e76840ada81342b79cb1c5b14278b719db8f"
+                    "checksumValue": "d565a1715a29991e0843efe80c12aac9fffa5774"
                 }
             ]
         },
@@ -1059,7 +1132,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "dde90628cac9daebfc3977bb66b95f32f03e4ccf"
+                    "checksumValue": "2ea9871f74bfbc848921f146cd011007fc99be71"
                 }
             ]
         },
@@ -1069,7 +1142,67 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "2df4d425c045bb9f8fcd514a8551e1e738ed5b72"
+                    "checksumValue": "7494605ba17cdd7758e045c7958541858098b561"
+                }
+            ]
+        },
+        {
+            "fileName": "vcpu_stall_detector.ko",
+            "SPDXID": "SPDXRef-vcpu_stall_detector.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "4b362a7cb905c361d5e13b5fce00cb8c4e15b14d"
+                }
+            ]
+        },
+        {
+            "fileName": "virtio_balloon.ko",
+            "SPDXID": "SPDXRef-virtio_balloon.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "52b665764d868102a54c5136a7a1ecce46ffd713"
+                }
+            ]
+        },
+        {
+            "fileName": "virtio_blk.ko",
+            "SPDXID": "SPDXRef-virtio_blk.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "6f550cb2680c55e0944b7cf52f7c6b74d11d5474"
+                }
+            ]
+        },
+        {
+            "fileName": "virtio_console.ko",
+            "SPDXID": "SPDXRef-virtio_console.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "811ccac9c5ea044490e4128c71512e291453459f"
+                }
+            ]
+        },
+        {
+            "fileName": "virtio_pci.ko",
+            "SPDXID": "SPDXRef-virtio_pci.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "d6e332c782696a5784bc164a37ccbeb97f0b892c"
+                }
+            ]
+        },
+        {
+            "fileName": "virtio_pci_modern_dev.ko",
+            "SPDXID": "SPDXRef-virtio_pci_modern_dev.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "acc4c91e6dab2dc20d130cb1a33771550717eb0f"
                 }
             ]
         },
@@ -1079,7 +1212,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "13d567fbc2bc8e63260ebf50fba1800ee839436c"
+                    "checksumValue": "cb58238a68f48725c4b886fbabb06a9a4ad51985"
                 }
             ]
         },
@@ -1089,7 +1222,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d44c400eaa6e54ea80973b73c09ffefc20c9f33a"
+                    "checksumValue": "7cca7562d6a3122fb80f6a36c616bd58549cbc89"
+                }
+            ]
+        },
+        {
+            "fileName": "vmw_vsock_virtio_transport.ko",
+            "SPDXID": "SPDXRef-vmw_vsock_virtio_transport.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "f28a7d80eeebaca03ba2b77bf061ff8ceb13824b"
                 }
             ]
         },
@@ -1099,7 +1242,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "210021819ab4c93f9918adc40e84d83058b907b3"
+                    "checksumValue": "e34398e290ef5fbaabe6ef794259e7cbcbc458bf"
                 }
             ]
         },
@@ -1109,7 +1252,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "789f357db2ca74f0e0ae7d13097c3542a4c1cb35"
+                    "checksumValue": "3f41dc10731f96b554ffdeee8d69a8555a008f2d"
                 }
             ]
         },
@@ -1119,7 +1262,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "6205a864141cb68e2d9e87fbb6edf9a96b81f590"
+                    "checksumValue": "1b960d4039c739d6bcb5044791d4ca5bd91b1a4a"
                 }
             ]
         }
@@ -1146,6 +1289,16 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
+            "spdxElementId": "SPDXRef-9pnet.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-9pnet_fd.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
             "spdxElementId": "SPDXRef-Image",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
@@ -1167,11 +1320,6 @@
         },
         {
             "spdxElementId": "SPDXRef-abi_symbollist",
-            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
-            "relationshipType": "GENERATED_FROM"
-        },
-        {
-            "spdxElementId": "SPDXRef-abi_symbollist.report",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1266,6 +1414,11 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
+            "spdxElementId": "SPDXRef-cctrng.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
             "spdxElementId": "SPDXRef-cdc-acm.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
@@ -1286,12 +1439,12 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
-            "spdxElementId": "SPDXRef-cfg80211.ko",
+            "spdxElementId": "SPDXRef-diag.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
         {
-            "spdxElementId": "SPDXRef-diag.ko",
+            "spdxElementId": "SPDXRef-download_configs.json",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1341,6 +1494,11 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
+            "spdxElementId": "SPDXRef-init_ddk.zip",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
             "spdxElementId": "SPDXRef-kernel-headers.tar.gz",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
@@ -1352,6 +1510,11 @@
         },
         {
             "spdxElementId": "SPDXRef-kernel_aarch64_Module.symvers",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-kernel_aarch64_ddk_headers_archive.tar.gz",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1387,11 +1550,6 @@
         },
         {
             "spdxElementId": "SPDXRef-libarc4.ko",
-            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
-            "relationshipType": "GENERATED_FROM"
-        },
-        {
-            "spdxElementId": "SPDXRef-mac80211.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1457,6 +1615,11 @@
         },
         {
             "spdxElementId": "SPDXRef-nhc_udp.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-open-dice.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1571,17 +1734,27 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
+            "spdxElementId": "SPDXRef-test_mappings.zip",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-tests.zip",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
             "spdxElementId": "SPDXRef-tipc.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
         {
-            "spdxElementId": "SPDXRef-toolchain_version",
+            "spdxElementId": "SPDXRef-unstripped_modules.tar.gz",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
         {
-            "spdxElementId": "SPDXRef-unstripped_modules.tar.gz",
+            "spdxElementId": "SPDXRef-usbmon.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1601,12 +1774,47 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
+            "spdxElementId": "SPDXRef-vcpu_stall_detector.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-virtio_balloon.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-virtio_blk.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-virtio_console.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-virtio_pci.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-virtio_pci_modern_dev.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
             "spdxElementId": "SPDXRef-vmlinux",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
         {
             "spdxElementId": "SPDXRef-vmlinux.symvers",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-vmw_vsock_virtio_transport.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
