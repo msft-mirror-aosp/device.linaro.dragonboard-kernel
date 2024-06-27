@@ -7,7 +7,7 @@
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android14-6.1" />
 
-  <project path="build/kernel" name="kernel/build" revision="b8974744b02d92dc96b438d47bc10a877f8d76ac">
+  <project path="build/kernel" name="kernel/build" revision="55cf78aff09739de2c890a23afddf4f50deffa8a">
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
 
     <linkfile dest="WORKSPACE" src="kleaf/bazel.WORKSPACE" />
@@ -17,13 +17,13 @@
     <linkfile dest="build/config.sh" src="config.sh" />
 </project>
 
-  <project path="common" name="kernel/common" revision="609541ba1afdca9e914cbef5ba00d3f5a32fd22a" />
+  <project path="common" name="kernel/common" revision="1a72e2f692ac431f98e13d30ff78bf70b6d9a8d9" />
 
   <project path="kernel/tests" name="kernel/tests" revision="a2acaf18ab3d4ba873060a3041a90f68b2f1a414" />
 
   <project path="kernel/configs" name="kernel/configs" revision="07e726fb7d0dc50ba6d8dcbbbe8def8d5ee9c573" />
 
-  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="a2b217b2780f2640d8345f3a3528241772cf79e6" />
+  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="6282281e9858f54e69552d9658bf25c1b9e1e3b7" />
 
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" revision="7775eb113f960bc69a780b621d03a715914d4bca" />
 
