@@ -2,13 +2,13 @@
     "spdxVersion": "SPDX-2.3",
     "dataLicense": "CC0-1.0",
     "SPDXID": "SPDXRef-DOCUMENT",
-    "name": "6.8.0-mainline-g830a3b57edc6-ab11649714",
-    "documentNamespace": "https://www.google.com/sbom/spdx/android/kernel/6.8.0-mainline-g830a3b57edc6-ab11649714",
+    "name": "6.9.0-mainline-gb343509ebd67-ab11947765-4k",
+    "documentNamespace": "https://www.google.com/sbom/spdx/android/kernel/6.9.0-mainline-gb343509ebd67-ab11947765-4k",
     "creationInfo": {
         "creators": [
             "Organization: Google"
         ],
-        "created": "2024-03-30T01:45:15Z"
+        "created": "2024-06-10T15:20:32Z"
     },
     "documentDescribes": [
         "SPDXRef-kernel"
@@ -19,11 +19,13 @@
             "SPDXID": "SPDXRef-kernel",
             "downloadLocation": "https://source.android.com",
             "filesAnalyzed": true,
-            "versionInfo": "6.8.0-mainline-g830a3b57edc6-ab11649714",
+            "versionInfo": "6.9.0-mainline-gb343509ebd67-ab11947765-4k",
             "supplier": "Organization: Google",
             "hasFiles": [
                 "6lowpan.ko",
                 "8021q.ko",
+                "9pnet.ko",
+                "9pnet_fd.ko",
                 "Image",
                 "Image.gz",
                 "Image.lz4",
@@ -50,8 +52,7 @@
                 "cdc_eem.ko",
                 "cdc_ether.ko",
                 "cdc_ncm.ko",
-                "cfg80211.ko",
-                "diag.ko",
+                "download_configs.json",
                 "ftdi_sio.ko",
                 "gki-info.txt",
                 "gki_certification_tools.tar.gz",
@@ -63,12 +64,12 @@
                 "kernel-headers.tar.gz",
                 "kernel-uapi-headers.tar.gz",
                 "kernel_aarch64_Module.symvers",
+                "kernel_aarch64_ddk_headers_archive.tar.gz",
                 "kernel_aarch64_filegroup_decl.tar.gz",
                 "kheaders.ko",
                 "l2tp_core.ko",
                 "l2tp_ppp.ko",
                 "libarc4.ko",
-                "mac80211.ko",
                 "mac802154.ko",
                 "macsec.ko",
                 "mii.ko",
@@ -105,8 +106,9 @@
                 "system_dlkm.modules.load",
                 "system_dlkm_staging_archive.tar.gz",
                 "test_mappings.zip",
+                "tests.zip",
                 "tipc.ko",
-                "toolchain_version",
+                "tipc_diag.ko",
                 "unstripped_modules.tar.gz",
                 "usbnet.ko",
                 "usbserial.ko",
@@ -118,7 +120,7 @@
                 "zsmalloc.ko"
             ],
             "packageVerificationCode": {
-                "packageVerificationCodeValue": "8b83d3c219c85a0daa60720cb4990d0d1ef25a5d"
+                "packageVerificationCodeValue": "af43146029ed954917d9d8da1a314e10b03a3b26"
             }
         },
         {
@@ -126,7 +128,7 @@
             "SPDXID": "SPDXRef-KernelSourceCode",
             "downloadLocation": "https://source.android.com",
             "filesAnalyzed": false,
-            "versionInfo": "6.8.0-mainline-g830a3b57edc6-ab11649714",
+            "versionInfo": "6.9.0-mainline-gb343509ebd67-ab11947765-4k",
             "supplier": "Organization: Google"
         },
         {
@@ -134,7 +136,7 @@
             "SPDXID": "SPDXRef-LinuxUpstreamPackage",
             "downloadLocation": "https://www.kernel.org",
             "filesAnalyzed": false,
-            "versionInfo": "6.8.0",
+            "versionInfo": "6.9.0",
             "supplier": "Organization: The Linux Kernel Organization"
         }
     ],
@@ -145,7 +147,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "ce84796077c0818b73f76b7274c7b0fd49db6364"
+                    "checksumValue": "7b0b2d470de8e803043ac44e43d685e23bdf42ab"
                 }
             ]
         },
@@ -155,7 +157,27 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "1b0ebc9a39b66616632aa1e046b2353f747b3bf9"
+                    "checksumValue": "0ce3ea9679656fb0cc6568ba1aecff6e62390240"
+                }
+            ]
+        },
+        {
+            "fileName": "9pnet.ko",
+            "SPDXID": "SPDXRef-9pnet.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "bbdca57d9524b6a79f9550f8b48a459aea966746"
+                }
+            ]
+        },
+        {
+            "fileName": "9pnet_fd.ko",
+            "SPDXID": "SPDXRef-9pnet_fd.ko",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "db74f4b543b71bf876c804895b79b72a863e5e95"
                 }
             ]
         },
@@ -165,7 +187,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d3045bf30984d41284ddfb8e4a44c894503419d3"
+                    "checksumValue": "c773b8661c2aaec59bc5e74a2a2fcbd6bac84d95"
                 }
             ]
         },
@@ -175,7 +197,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8d410b319cd5ff27f112f4f44df7319f9f4e4dd5"
+                    "checksumValue": "3a8f55c7b3446828febda7966d3c0661abfac690"
                 }
             ]
         },
@@ -185,7 +207,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f43fc4d7a126dafc57afe5b7c87ce1188f051027"
+                    "checksumValue": "b384c4630d1fabdb761bdad59c63e3db99cddec6"
                 }
             ]
         },
@@ -195,7 +217,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "6e6eb72d88f0befe5e9380c81acc4f282f19eb02"
+                    "checksumValue": "6d5cc6c57d21a3938b637fd5da4af59a52d4d4dd"
                 }
             ]
         },
@@ -205,7 +227,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f61cd965751ebea1dd47875e4df71d0031f1d111"
+                    "checksumValue": "bb940f11c417ae9bc3066e0cbe88f4d1ea07ad91"
                 }
             ]
         },
@@ -215,7 +237,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "b37735a091aa61469ac3649939e12449c6a53090"
+                    "checksumValue": "44f8e01be7eeb652989184ae03a0489711d50019"
                 }
             ]
         },
@@ -225,7 +247,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "78f38c974ab05af6acc61d2b5b0b09e8f6d213ec"
+                    "checksumValue": "69f1b504eb77a7c74dd7c6830e1b1fb615f023fd"
                 }
             ]
         },
@@ -235,7 +257,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "dd48185c2f8c16134c45852c0645c4376bddb332"
+                    "checksumValue": "1a1ed30d981d010211b8941eb6840b8dc9ef8044"
                 }
             ]
         },
@@ -245,7 +267,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d3ebd1e79f5762fea1d267993ea8950c84c8307f"
+                    "checksumValue": "24507f946521da4bce9dab2755738393620672ec"
                 }
             ]
         },
@@ -255,7 +277,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "ef74d810c69202475f4b2c73a403df1c8c9d76bc"
+                    "checksumValue": "c14510d30a404ac36e468d7448a4a6ebcb5c3728"
                 }
             ]
         },
@@ -265,7 +287,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8dcf2b3420601502ad4a02497af85ea0fb59e21e"
+                    "checksumValue": "a5e717c7dd05254b68d575dba5e9acdaf41fcaf9"
                 }
             ]
         },
@@ -275,7 +297,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "5618b2141d4064c844f3fe461d161f6ea4e77524"
+                    "checksumValue": "dce9fa18b38b2d2c0c28602e0ca998b1744bf168"
                 }
             ]
         },
@@ -285,7 +307,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "7c9f31953d1eba68d1be832511abbd95556f8850"
+                    "checksumValue": "0a03dd75deedf33e1abfb0f133d54423ce91b8e3"
                 }
             ]
         },
@@ -295,7 +317,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d010c1d19cc9d314554498a715b096f2f5c96ccb"
+                    "checksumValue": "1958e3f5ed615a8ddb781751cbd1e1397ea4044c"
                 }
             ]
         },
@@ -305,7 +327,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "124d054793ec340009caa4414e54d912f127bb46"
+                    "checksumValue": "05948a60cd19bf3412cf9e2e6bc41eb8a4a730e4"
                 }
             ]
         },
@@ -315,7 +337,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "2342948f5721808e4571f97f559ad6118f6dbb33"
+                    "checksumValue": "98932c4f5a6e652a282c3983302493f5d73317ce"
                 }
             ]
         },
@@ -335,7 +357,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "319d0268eca65510c3f2f249397888d812faf069"
+                    "checksumValue": "636494b0506e5a6562d8d93a99e9af5bdead61cd"
                 }
             ]
         },
@@ -345,7 +367,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "4bc03bcae460564fafe0c5e6cf8f113f85d0fa93"
+                    "checksumValue": "0fd848de10339684eb57c89c04b48cc119124e3a"
                 }
             ]
         },
@@ -355,7 +377,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "5b61e311fd0c1c8fc86245f13faaf85a211f6309"
+                    "checksumValue": "cfafceaa0454613b4b7b608e04b7bbc76b9a3338"
                 }
             ]
         },
@@ -365,7 +387,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "ab67e31069d85214470b0bf2ea4cf0359524bf38"
+                    "checksumValue": "98f91200f3c2ddbe51bc84276fe610dcb0b38044"
                 }
             ]
         },
@@ -375,7 +397,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "5080e9bb327ebcee7d3a49b538bc1912351232d7"
+                    "checksumValue": "78d93ac650f82a9a8972edc63cfe95364e963930"
                 }
             ]
         },
@@ -385,7 +407,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "208e16c6ea57c3822787691667d7b59371d4ac3e"
+                    "checksumValue": "d0472746e25e31e3d7aad46eef49fdff1cb8e478"
                 }
             ]
         },
@@ -395,7 +417,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "c123adc62525eb00a1b355630d88052760b7e5aa"
+                    "checksumValue": "d884113d6c071a6779747d09dd4cc1330d7bbe80"
                 }
             ]
         },
@@ -405,7 +427,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "cd372edfbfe41e2ac27a378953244a5c1cdf2c76"
+                    "checksumValue": "4751f740933111a79617dcb7a01c4c3cb7774f78"
                 }
             ]
         },
@@ -415,27 +437,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "e55ba1494147ce792ee1331caff10c952d59660f"
+                    "checksumValue": "86a419df3950529d8481cb9a9d70605cd29fef26"
                 }
             ]
         },
         {
-            "fileName": "cfg80211.ko",
-            "SPDXID": "SPDXRef-cfg80211.ko",
+            "fileName": "download_configs.json",
+            "SPDXID": "SPDXRef-download_configs.json",
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "49acef6a40d24e949aae0c489c6feed4e765200f"
-                }
-            ]
-        },
-        {
-            "fileName": "diag.ko",
-            "SPDXID": "SPDXRef-diag.ko",
-            "checksums": [
-                {
-                    "algorithm": "SHA1",
-                    "checksumValue": "e49e8cb32904cf82fc21bfdd742ff3bd634bcfe4"
+                    "checksumValue": "43ca3a72c520efb20a2c1b8b24e3eff5740e1ee9"
                 }
             ]
         },
@@ -445,7 +457,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "c9bae94a611229531b1921b5657bd1d36157399f"
+                    "checksumValue": "a79c182f14195ef2e2f41b3e31d0791622b06f0f"
                 }
             ]
         },
@@ -455,7 +467,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "110d64c69864eacbc1698a457f41a7206b48b7af"
+                    "checksumValue": "e67a43a01d46c1e2d0b4090826090f8567abfeb2"
                 }
             ]
         },
@@ -465,7 +477,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "b25d60147875e6ca55aa3065279c404b67b784f0"
+                    "checksumValue": "7e037a4f90baf687ea404de85f15c770988ea9d0"
                 }
             ]
         },
@@ -475,7 +487,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "973f538c556242b03324eda54415f3a47244382d"
+                    "checksumValue": "0dd26c4355d72e470926bd1bc78059775c55963e"
                 }
             ]
         },
@@ -485,7 +497,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "0a1c3ef3186a7caafe50a770a77c22a9e13dd634"
+                    "checksumValue": "5d8f7313fa590da62ac1832f641bab870b86d090"
                 }
             ]
         },
@@ -495,7 +507,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "23f65f830db2347a6a7234d5a95fec6da9f1b0df"
+                    "checksumValue": "59428321f58524faba919dfb4169b15027cb290b"
                 }
             ]
         },
@@ -505,7 +517,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "acb8d37ae95ca7225b3bbac76039f0d9658809b3"
+                    "checksumValue": "25d31ae900da649cb18be634a64939e97671c591"
                 }
             ]
         },
@@ -515,7 +527,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "6dc5fa95fe1cc2d65f97d2cb9f9f00fe003eb095"
+                    "checksumValue": "c0f5c0981c65284b5d922f9771b40e057a8eca04"
                 }
             ]
         },
@@ -525,7 +537,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "6a985960f3a8fddcd73b4461eea7899a7ef390a3"
+                    "checksumValue": "20aec7c1d30694375e90d68170884d47f4c29b3f"
                 }
             ]
         },
@@ -535,7 +547,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "4027dceba53a74813f5f48ff4143d9f631b9d625"
+                    "checksumValue": "1e9b61cfea918fd4d98c7b7a48f5dd2d0f1eeb5c"
                 }
             ]
         },
@@ -545,7 +557,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d090f183107f913abea7b617c2191df0ae4c3504"
+                    "checksumValue": "8e037b0f022c3c0d9d575a4d1f253211d11405d0"
+                }
+            ]
+        },
+        {
+            "fileName": "kernel_aarch64_ddk_headers_archive.tar.gz",
+            "SPDXID": "SPDXRef-kernel_aarch64_ddk_headers_archive.tar.gz",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "5703e3763d90a0e08edd29930e0d0ae66d4ba9f2"
                 }
             ]
         },
@@ -555,7 +577,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "86df3a67f66d0702309d7e305803992f6a02110e"
+                    "checksumValue": "702ff34e529c4b0dd325da4417898dced80c763b"
                 }
             ]
         },
@@ -565,7 +587,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "54c1b4f8def1b1b8cd702ee4547994f923dd8a77"
+                    "checksumValue": "7a830dcb126dfef6034d26fb442cea06814165eb"
                 }
             ]
         },
@@ -575,7 +597,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "262849785ba92b11f66138d7ea5c49e8c8567fe9"
+                    "checksumValue": "ea93e9ea789f75928884b151369f8c661d9afe50"
                 }
             ]
         },
@@ -585,7 +607,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8158b92c5a1a7900433dfc89a624240becdcd6c4"
+                    "checksumValue": "0c27462d9bc8ba2e0e5bdd73eb06ef893d59bb1c"
                 }
             ]
         },
@@ -595,17 +617,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8d05735ee26a3a8ee807f877a093e2cff29dcb90"
-                }
-            ]
-        },
-        {
-            "fileName": "mac80211.ko",
-            "SPDXID": "SPDXRef-mac80211.ko",
-            "checksums": [
-                {
-                    "algorithm": "SHA1",
-                    "checksumValue": "1a6da43caa4fb5206e774e18d19eb2a106cd45b1"
+                    "checksumValue": "459c88719444d183154f34705319d646256551bb"
                 }
             ]
         },
@@ -615,7 +627,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "06a0c2db721ff6679382861692e312dc04a8f423"
+                    "checksumValue": "0199f26bac47866569490110c526dac7bab85a6d"
                 }
             ]
         },
@@ -625,7 +637,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "7d5d08a79fefcd2b77140530359f316685ab5024"
+                    "checksumValue": "ae8ec4625b08fb6abac731e43b232ee4a0a5611d"
                 }
             ]
         },
@@ -635,7 +647,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "21b6f66ce6519d4d688d08fbf6e6bd3ef301339a"
+                    "checksumValue": "5032d17ad79ed5c9cfd4d702c3b3734e0fd3f6dc"
                 }
             ]
         },
@@ -655,7 +667,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "bfe7391ae935a134bcc2d2086103396438663ce2"
+                    "checksumValue": "3a8ecbfbcb1f7623f23c5c0696bd6b4acc1491b2"
                 }
             ]
         },
@@ -665,7 +677,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "b43c6e359a414ea54be20403b83b66f76d9a5a41"
+                    "checksumValue": "9fcc770afc09fb5ae772bef432f3ef234b4c5d39"
                 }
             ]
         },
@@ -675,7 +687,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "abb93d9895086959f43758a85f491cc8df09e23a"
+                    "checksumValue": "85bcf8dfbda6aa2ee33bb44700e65f9a362fb6fa"
                 }
             ]
         },
@@ -685,7 +697,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d4e86eeef914b84adabd11110c62fd8b94b49974"
+                    "checksumValue": "a61adbb149e8244ff78d4bb162956ee654a21046"
                 }
             ]
         },
@@ -695,7 +707,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "819ea86b64aadd1bf35aaf09b67927c04d525019"
+                    "checksumValue": "e50fc71bc0b005d633cdeccc3aed9558b642a366"
                 }
             ]
         },
@@ -705,7 +717,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "4a8813d859182eb02003dd30389b0a3455f194b8"
+                    "checksumValue": "0a815c696480af4dcdc88a28e2797d92e383a23e"
                 }
             ]
         },
@@ -715,7 +727,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "75a05e6d4260a710c15d97d2b7d0fee6c1a4a97d"
+                    "checksumValue": "c6ebf0a2cc8ef4de0957bd27d0e29efa4ceb5fc2"
                 }
             ]
         },
@@ -725,7 +737,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "fb31989e04b54c7ad6d4e01be45cd7a5b26734d4"
+                    "checksumValue": "3561afc7dde56b6f20183cae3d0300ee85ffa52b"
                 }
             ]
         },
@@ -735,7 +747,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "4d10f0a1369d25278f4f01b26da33bc2750e7690"
+                    "checksumValue": "0dbd884d729e6a4613eea6f09bcc5b749d65ccad"
                 }
             ]
         },
@@ -745,7 +757,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "a65b863474640be5da9fff3a4a0a527c112ddae0"
+                    "checksumValue": "828a8978c282ec80f7d4fe2da6cb8a8d90a5c692"
                 }
             ]
         },
@@ -755,7 +767,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "70e22420d084e0772af3fca6007acff3731fa197"
+                    "checksumValue": "43063abff78023d749d80e685cb8dcb7d5c7ab35"
                 }
             ]
         },
@@ -765,7 +777,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "588c866992b75f1855d96cd58c9f9cfc777f2e21"
+                    "checksumValue": "c1b6b47d4c6955b9258e4955b842487a74c8ca62"
                 }
             ]
         },
@@ -775,7 +787,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "83ce945c2b7532e9881bdf8250a3a32e57a1908e"
+                    "checksumValue": "76e1e45d0740cafb81c4437f6f7a9f1c399d672a"
                 }
             ]
         },
@@ -785,7 +797,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "0d32768fc936c6ede0dc130b0f28209ede2877fe"
+                    "checksumValue": "587e24bb73a3bf1e286ec9c958ac4a3a0b11c856"
                 }
             ]
         },
@@ -795,7 +807,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "8e7c23b87cb574de98e68b1e96535772552c47a4"
+                    "checksumValue": "3064784e146aa3cb2e2661e37db6cf70ea0c4a73"
                 }
             ]
         },
@@ -805,7 +817,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "5f07a6322233604d3d22dd9bab4465d4391d0833"
+                    "checksumValue": "5b11a7535d1f280eb4779efc591f4a25fcf387b7"
                 }
             ]
         },
@@ -815,7 +827,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d47070fdc252f1a6e231535599f85542607e8e7c"
+                    "checksumValue": "e75aa49ee6f63afede82263094eea852a88483fc"
                 }
             ]
         },
@@ -825,7 +837,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "3048aa4f7eac3a48552160db94ee67abd97501ea"
+                    "checksumValue": "44c8b313c07c0c1e0518d165b482b414fd38559a"
                 }
             ]
         },
@@ -835,7 +847,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "4f03ac8021b7bb65b49fa2344d6bee178ad09cfc"
+                    "checksumValue": "2529b89d0fed6b760beb79b4d193ff52d6ad3b67"
                 }
             ]
         },
@@ -845,7 +857,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "6d93372afe41f77bbcfc96c93b2b24a59300bbc5"
+                    "checksumValue": "bf0f6e24ad3a3b1283a36c5f0fd8ab20df0c2427"
                 }
             ]
         },
@@ -855,7 +867,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "005fe7cc519743e0b8fffe20ae313da6fbd4780c"
+                    "checksumValue": "bef512a3ff6c1d5438346096915d840b6445a9ed"
                 }
             ]
         },
@@ -865,7 +877,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "3b7bac98c3f48b795412555109afd4069377e5f8"
+                    "checksumValue": "072c77ccf980905b7674fafe35be097052d2e939"
                 }
             ]
         },
@@ -875,7 +887,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "9f43ad9128de8b09e25d74fb57fca17f8620dc0d"
+                    "checksumValue": "13b2cf16239eccff2eefb32a78b2e09af77c06d1"
                 }
             ]
         },
@@ -885,7 +897,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f6cde17c769fd2ed4b7e1dcf4bf62cc45ef1dfc0"
+                    "checksumValue": "dcd7ccfc63229427d3ddd967096b9353ba8d5c05"
                 }
             ]
         },
@@ -895,7 +907,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "0096b1d8ca6d4a488ace6e6f3bba55486c7c8493"
+                    "checksumValue": "2deb21cedad299f27951c35b21a88d0f840483b7"
                 }
             ]
         },
@@ -905,7 +917,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "91d56caa00c246986fd9babd38531a6e6e3e66d5"
+                    "checksumValue": "d2a864426a2c35c98318af27c621d6f510bbb31a"
                 }
             ]
         },
@@ -915,7 +927,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f4ecfda81646b259556bab3eeb72bdd3d38d2d37"
+                    "checksumValue": "6f57c94fb546efc758820e50c642d53266a2dc38"
                 }
             ]
         },
@@ -925,7 +937,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "dc9ce4dd3c54482a77c7c94fefd2cd6bb404fd17"
+                    "checksumValue": "8a5f98f63b8ea7364927465f460fd03a712cc16c"
                 }
             ]
         },
@@ -945,7 +957,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d93050cd328d199471f00e5fe37cfadafaead9dc"
+                    "checksumValue": "a4c759731a8b1288ff5534e92389a6f0d876338a"
                 }
             ]
         },
@@ -955,7 +967,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "3073c7a1c65ed7000a583cd46fdff9122e4080f4"
+                    "checksumValue": "cdb82b975cb4aefb224d48ea70f362ff93f92db6"
                 }
             ]
         },
@@ -965,7 +977,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "47bebb0289addc09cb718d249e5a2cdf86a38efb"
+                    "checksumValue": "bf35665eaf51959f297d6e4417128469516afd12"
+                }
+            ]
+        },
+        {
+            "fileName": "tests.zip",
+            "SPDXID": "SPDXRef-tests.zip",
+            "checksums": [
+                {
+                    "algorithm": "SHA1",
+                    "checksumValue": "16f3ee8ac1a4674e503ade7d5907f117157caf24"
                 }
             ]
         },
@@ -975,17 +997,17 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "cf3ef5d14a84b44b748643bcd0b8891a2bf1d222"
+                    "checksumValue": "abc29e8109f1796bb25024ce6396839da3e5c302"
                 }
             ]
         },
         {
-            "fileName": "toolchain_version",
-            "SPDXID": "SPDXRef-toolchain_version",
+            "fileName": "tipc_diag.ko",
+            "SPDXID": "SPDXRef-tipc_diag.ko",
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "63c2997caa3c5e65a3ad40e20d119cd44045b0ac"
+                    "checksumValue": "6a68dfa248d00ffb5a824e49510415c86976ec27"
                 }
             ]
         },
@@ -995,7 +1017,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "02d342e8e42b3db9d68e99ac0524c27113022d58"
+                    "checksumValue": "9ddb4bf7d39cd2fcdaf18b6f59500d5ff4173ef5"
                 }
             ]
         },
@@ -1005,7 +1027,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "f28accda284dea01d4ae39d5658e674d4288ec5a"
+                    "checksumValue": "a834d2c9e06c8e5e11b395c807a1c117be5e76ac"
                 }
             ]
         },
@@ -1015,7 +1037,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "b80b7cde3480a6088d14c718f5fb37576155a0b2"
+                    "checksumValue": "8ba4d941ea62d6e34ce887895af1784dc9fa883f"
                 }
             ]
         },
@@ -1025,7 +1047,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "b97b0e6d2359e93592590393de9db7df3a0cf489"
+                    "checksumValue": "8a817c6cfd4f252257c49b0e1529e5e6daf4f93a"
                 }
             ]
         },
@@ -1035,7 +1057,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d51f1bc374738aade74dba61f89a018479a93034"
+                    "checksumValue": "2bf64a74976fc999e21deebf385caf084a93a64d"
                 }
             ]
         },
@@ -1045,7 +1067,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "167e167eae7de43c7e2f822c62a6410cefbedef4"
+                    "checksumValue": "6865cab6fa1b8ea3ef2a9da436bdcea7c2b9dd6f"
                 }
             ]
         },
@@ -1055,7 +1077,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "c8b1255b80647a916ca22216c1adb5435d5399c4"
+                    "checksumValue": "664f6d3ccc96b6e0e5d24eda08df2d5251bad859"
                 }
             ]
         },
@@ -1065,7 +1087,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "d97e80d23b3f267976507620516a9df697b269c8"
+                    "checksumValue": "172f5f0ddf167d6f9a515bab27661e78f1320193"
                 }
             ]
         },
@@ -1075,7 +1097,7 @@
             "checksums": [
                 {
                     "algorithm": "SHA1",
-                    "checksumValue": "629970bfee1f911c6f8ae01c7a419d1c11c2a04e"
+                    "checksumValue": "45a01b792c52c3027a91c246cf4195c028f69d97"
                 }
             ]
         }
@@ -1098,6 +1120,16 @@
         },
         {
             "spdxElementId": "SPDXRef-8021q.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-9pnet.ko",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
+            "spdxElementId": "SPDXRef-9pnet_fd.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1232,12 +1264,7 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
-            "spdxElementId": "SPDXRef-cfg80211.ko",
-            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
-            "relationshipType": "GENERATED_FROM"
-        },
-        {
-            "spdxElementId": "SPDXRef-diag.ko",
+            "spdxElementId": "SPDXRef-download_configs.json",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1297,6 +1324,11 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
+            "spdxElementId": "SPDXRef-kernel_aarch64_ddk_headers_archive.tar.gz",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
             "spdxElementId": "SPDXRef-kernel_aarch64_filegroup_decl.tar.gz",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
@@ -1318,11 +1350,6 @@
         },
         {
             "spdxElementId": "SPDXRef-libarc4.ko",
-            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
-            "relationshipType": "GENERATED_FROM"
-        },
-        {
-            "spdxElementId": "SPDXRef-mac80211.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
@@ -1507,12 +1534,17 @@
             "relationshipType": "GENERATED_FROM"
         },
         {
+            "spdxElementId": "SPDXRef-tests.zip",
+            "relatedSpdxElement": "SPDXRef-KernelSourceCode",
+            "relationshipType": "GENERATED_FROM"
+        },
+        {
             "spdxElementId": "SPDXRef-tipc.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },
         {
-            "spdxElementId": "SPDXRef-toolchain_version",
+            "spdxElementId": "SPDXRef-tipc_diag.ko",
             "relatedSpdxElement": "SPDXRef-KernelSourceCode",
             "relationshipType": "GENERATED_FROM"
         },

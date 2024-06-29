@@ -1,6 +1,6 @@
 {
     "best_target_priority": 1,
-    "bid": "11611633",
+    "bid": "12000080",
     "branch": "aosp_kernel-common-android14-6.1",
     "branch_priority": 1,
     "build_configs": {},
@@ -12,7 +12,7 @@
     "enable_docker": true,
     "git-pull": null,
     "git-server": "https://android.googlesource.com",
-    "hostname": "r-aed28e15c2e98075-qnr0",
+    "hostname": "r-461eb4995eea544f-8lx2",
     "inc-build": false,
     "java-version": null,
     "last_logfile": null,
@@ -50,7 +50,7 @@
                     "name": "aosp",
                     "review": "https://android.googlesource.com/"
                 },
-                "revision": "b8974744b02d92dc96b438d47bc10a877f8d76ac"
+                "revision": "55cf78aff09739de2c890a23afddf4f50deffa8a"
             },
             {
                 "name": "kernel/common",
@@ -60,7 +60,7 @@
                     "name": "aosp",
                     "review": "https://android.googlesource.com/"
                 },
-                "revision": "609541ba1afdca9e914cbef5ba00d3f5a32fd22a"
+                "revision": "1a72e2f692ac431f98e13d30ff78bf70b6d9a8d9"
             },
             {
                 "name": "kernel/tests",
@@ -90,7 +90,7 @@
                     "name": "aosp",
                     "review": "https://android.googlesource.com/"
                 },
-                "revision": "a2b217b2780f2640d8345f3a3528241772cf79e6"
+                "revision": "6282281e9858f54e69552d9658bf25c1b9e1e3b7"
             },
             {
                 "cloneDepth": "1",
@@ -253,15 +253,15 @@
                 "name": "aosp",
                 "review": "https://android.googlesource.com/"
             },
-            "revision": "50aa9d430763cd3818eb7ef52fd07590ca493164"
+            "revision": "279f3529ae634baf129636703d1d3427afe2113f"
         }
     },
     "platform": "linux",
     "proof_build": false,
     "repo-dict": {
-        "kernel/build": "b8974744b02d92dc96b438d47bc10a877f8d76ac",
-        "kernel/common": "609541ba1afdca9e914cbef5ba00d3f5a32fd22a",
-        "kernel/common-modules/virtual-device": "a2b217b2780f2640d8345f3a3528241772cf79e6",
+        "kernel/build": "55cf78aff09739de2c890a23afddf4f50deffa8a",
+        "kernel/common": "1a72e2f692ac431f98e13d30ff78bf70b6d9a8d9",
+        "kernel/common-modules/virtual-device": "6282281e9858f54e69552d9658bf25c1b9e1e3b7",
         "kernel/configs": "07e726fb7d0dc50ba6d8dcbbbe8def8d5ee9c573",
         "kernel/manifest": "54fecda56e6a505b77bb989152fafd2ddaba63d8",
         "kernel/prebuilts/build-tools": "e905be252a53d20c52bd9e59df3ff8fdd46b9eab",
@@ -285,8 +285,8 @@
     "reset_image_build": false,
     "rollout": [],
     "src_ctrl": "repo",
-    "sync_finish_time": 1711066431.2277274,
-    "sync_start_time": 1711066399.190978,
+    "sync_finish_time": 1718976739.3365624,
+    "sync_start_time": 1718976718.4399028,
     "sync_succeed": 1,
     "target": {
         "apiary_target": "kernel_aarch64",
@@ -342,9 +342,9 @@
             "toolchain_version",
             "boot-gz.img",
             "pppox.ko",
-            "manifest_11611633.xml",
             "slhc.ko",
             "btsdio.ko",
+            "manifest_12000080.xml",
             "usbserial.ko",
             "Image",
             "kheaders.ko",
@@ -411,19 +411,19 @@
             "logs/resource_utilization/cpu_usage.json",
             "BUILD_INFO"
         ],
-        "dist-dir": "/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/11611633",
+        "dist-dir": "/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/12000080",
         "name": "kernel_aarch64",
         "rules": [
             [
-                "tools/bazel build --jobs=80 --make_jobs=80 --repo_manifest=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/11611633/manifest_11611633.xml --kleaf_localversion --config=android_ci --profile=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/11611633/logs/command.profile.json //common:kernel_aarch64_dist //common:kernel_aarch64_tests && tools/bazel run --jobs=80 --make_jobs=80 --repo_manifest=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/11611633/manifest_11611633.xml --kleaf_localversion --config=android_ci //common:kernel_aarch64_dist -- --dist_dir=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/11611633 --flat && ( tools/bazel test --jobs=80 --make_jobs=80 --repo_manifest=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/11611633/manifest_11611633.xml --kleaf_localversion --config=android_ci --build_metadata=\"ab_build_id=11611633\" --build_metadata=\"ab_target=kernel_aarch64\" --build_metadata=\"test_definition_name=kernel/kleaf/kernel_aarch64_tests\" //common:kernel_aarch64_tests  || [[ \"$?\" == \"3\" ]] )",
+                "tools/bazel build --jobs=80 --make_jobs=80 --repo_manifest=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/12000080/manifest_12000080.xml --kleaf_localversion --config=android_ci --profile=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/12000080/logs/command.profile.json //common:kernel_aarch64_dist //common:kernel_aarch64_tests && tools/bazel run --jobs=80 --make_jobs=80 --repo_manifest=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/12000080/manifest_12000080.xml --kleaf_localversion --config=android_ci //common:kernel_aarch64_dist -- --dist_dir=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/12000080 --flat && ( tools/bazel test --jobs=80 --make_jobs=80 --repo_manifest=/buildbot/dist_dirs/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/12000080/manifest_12000080.xml --kleaf_localversion --config=android_ci --build_metadata=\"ab_build_id=12000080\" --build_metadata=\"ab_target=kernel_aarch64\" --build_metadata=\"test_definition_name=kernel/kleaf/kernel_aarch64_tests\" //common:kernel_aarch64_tests  || [[ \"$?\" == \"3\" ]] )",
                 "build.log",
                 true,
                 false
             ]
         ],
-        "storage_path": "/bigstore/android-build/builds/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/11611633/137fe1a7eb6f8a8fcf997e1e7e931fb02e7b65fbdaebc7bcbbd0fb2f34882c91",
-        "target_finish_time": 1711066729.395825,
-        "target_start_time": 1711066432.1739104,
+        "storage_path": "/bigstore/android-build/builds/aosp_kernel-common-android14-6.1-linux-kernel_aarch64/12000080/d7e0808decd5ca76ae1eea450a075e17a5932e35727a2210fb8c672e286dac6f",
+        "target_finish_time": 1718977066.5463948,
+        "target_start_time": 1718976740.962583,
         "target_status": 1
     },
     "trident_usage": {
@@ -432,57 +432,47 @@
     },
     "use_goma": false,
     "worknode": {
-        "containerId": "L17800030002630996",
-        "creationTimeMillis": "1711066341943",
+        "containerId": "L31900030004670300",
+        "creationTimeMillis": "1718976640466",
         "currentAttempt": {
-            "attemptId": "Z1twXNdYsAEExCaNwCQqzA==",
+            "attemptId": "AsbM6ATYxVV4tuWcCmnriA==",
             "progressMessages": [
                 {
-                    "displayMessage": "Build 11611633 for node L17800030002630996:N38300030043795350 has been inserted",
-                    "messageString": "Build 11611633 for node L17800030002630996:N38300030043795350 has been inserted",
-                    "timeMillis": "1711066349607"
-                },
-                {
-                    "displayMessage": "Build 11611633 for node L17800030002630996:N38300030043795350 has been popped",
-                    "messageString": "Build 11611633 for node L17800030002630996:N38300030043795350 has been popped",
-                    "timeMillis": "1711066352174"
-                },
-                {
-                    "displayMessage": "Build 11611633 for node L17800030002630996:N38300030043795350 has been popped",
-                    "messageString": "Build 11611633 for node L17800030002630996:N38300030043795350 has been popped",
-                    "timeMillis": "1711066376648"
+                    "displayMessage": "Build 12000080 for node L31900030004670300:N73300030073672562 has been inserted",
+                    "messageString": "Build 12000080 for node L31900030004670300:N73300030073672562 has been inserted",
+                    "timeMillis": "1718976649820"
                 }
             ],
-            "startTimeMillis": "1711066345360"
+            "startTimeMillis": "1718976645283"
         },
-        "heartbeatTimeMillis": "1200000",
-        "id": "L17800030002630996:N38300030043795350",
+        "heartbeatTimeMillis": "172800000",
+        "id": "L31900030004670300:N73300030073672562",
         "inputEdges": [
             {
-                "neighborId": "L17800030002630996:N78300030043795344"
+                "neighborId": "L31900030004670300:N46400030073672556"
             }
         ],
         "isFinal": false,
-        "lastUpdatedMillis": "1711066376738",
+        "lastUpdatedMillis": "1718976649934",
         "nodeClass": "postsubmit",
         "retryStatus": {
             "maximumRetries": 4,
             "retryCount": 0
         },
-        "revision": "a0baSTjFA/ESRUmndnz8lw==",
+        "revision": "0eSkFKn/crqkWWj3HhAR1A==",
         "status": "scheduled",
         "statusHistorys": [
             {
                 "status": "created",
-                "timestampMillis": "1711066341943"
+                "timestampMillis": "1718976640466"
             },
             {
                 "status": "pending",
-                "timestampMillis": "1711066342774"
+                "timestampMillis": "1718976641588"
             },
             {
                 "status": "scheduled",
-                "timestampMillis": "1711066345360"
+                "timestampMillis": "1718976645283"
             }
         ],
         "workExecutorType": "submittedBuild",
@@ -492,8 +482,8 @@
                 "branchConfig": {
                     "sloTier": "bestEffort"
                 },
-                "buildId": "11611633",
-                "gerritPollerTimestamp": "1711066208496",
+                "buildId": "12000080",
+                "gerritPollerTimestamp": "1718976498492",
                 "manuallyTriggered": false,
                 "syncTimeoutSecond": 2700,
                 "target": {
