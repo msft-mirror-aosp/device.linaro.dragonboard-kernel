@@ -1,1 +1,1 @@
-certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH:android13-5.10 --prop BUILD_NUMBER:9278478 --prop KERNEL_RELEASE:5.10.107-android13-4-00009-g6cbaa88f4ae0-ab9278478
+certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH:android13-5.10 --prop BUILD_NUMBER:11990088 --prop KERNEL_RELEASE:5.10.210-android13-4-03254-g38965378c80a-ab11990088
