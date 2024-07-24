@@ -1,2 +1,2 @@
-certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.1.60-android15-0-g856b6ec7037f-ab11032209
-kernel_release=6.1.60-android15-0-g856b6ec7037f-ab11032209
+certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.1.78-android14-11-g1a72e2f692ac-ab12000080
+kernel_release=6.1.78-android14-11-g1a72e2f692ac-ab12000080
