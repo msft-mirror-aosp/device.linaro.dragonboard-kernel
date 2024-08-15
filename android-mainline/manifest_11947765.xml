@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<manifest>
+  <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android.googlesource.com/" />
+
+  <default revision="main" remote="aosp" sync-j="4" />
+
+  <superproject name="kernel/superproject" remote="aosp" revision="common-android-mainline" />
+
+  <project path="build/kernel" name="kernel/build" groups="ddk" revision="9fabd0c074d62c1c6cd1c5a9c6d3c04464799b41">
+    <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
+
+    <linkfile dest="MODULE.bazel" src="kleaf/bzlmod/bazel.MODULE.bazel" />
+</project>
+
+  <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="ddk" revision="212bca45fa9e280adc98081483f649814baf4b61" />
+
+  <project path="common" name="kernel/common" revision="b343509ebd6767934089e596d39e278ba8068669" />
+
+  <project path="kernel/common-patches" name="kernel/common-patches" revision="3807ce65081de12ef4baa2a04487306672685160">
+    <linkfile dest="common/patches" src="android-mainline" />
+</project>
+
+  <project path="kernel/tests" name="kernel/tests" revision="c75f0c61e196acb21c78785a9cf648a3685d5c42" />
+
+  <project path="kernel/configs" name="kernel/configs" revision="dd906cbcf2b71bddbf83199ce85f3595a3afcc78" />
+
+  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="4b39460f33d9644670f95266774932f8c8cb0d4f" />
+
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" revision="2a75ca38045fd5c04b1a35a5db55f8a3a1421001" clone-depth="1" groups="ddk" />
+
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" groups="ddk" revision="0e7e2fc3a9d2d02524784386e174abe268953251" />
+
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" groups="ddk" revision="0b533417022c3ececafa78a6b3164c5263bdec5a" />
+
+  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="1" revision="1634c6a556d1f2c24897bf74156c6449486e8941" />
+
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" groups="ddk" revision="42dd6457d323f1b5db3c7d4cf8377380126fcdb8" />
+
+  <project path="prebuilts/rust" name="platform/prebuilts/rust" revision="1f919de40f5e57801cc1bf0c95025e01a7b4282e" clone-depth="1" />
+
+  <project path="prebuilts/tradefed" name="platform/tools/tradefederation/prebuilts" clone-depth="1" revision="d2b0c069d8ebe0feed7090018d8c0aff2125e584" />
+
+  <project path="prebuilts/asuite" name="platform/prebuilts/asuite" clone-depth="1" revision="659188034e89b2456c4cea7e38c80c28589dafa5" />
+
+  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" revision="f5c284e8998dd8a085cf027bb518b6c2b84cf744" />
+
+  <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" revision="c6c90521b7c317f13d41bbd9336a8d45ee202cec" clone-depth="1" groups="ddk" />
+
+  <project path="prebuilts/ndk-r26" name="toolchain/prebuilts/ndk/r26" clone-depth="1" groups="ddk" revision="e535051ebc04204cec44bde38f62385d63180388" />
+
+  <project path="external/libcap-ng" name="platform/external/libcap-ng" revision="2bcc92ae19481dd2b8d3ce3abdfbbee49261abe6" />
+
+  <project path="external/libcap" name="platform/external/libcap" revision="8729338c078737da57a8b63ee88016799dfb4cdb" />
+
+  <project path="external/bazel-skylib" name="platform/external/bazel-skylib" groups="ddk-external" revision="f99027d26b5b8bf9a5853e8f3ee3fb5b8f345fd7" />
+
+  <project path="external/bazelbuild-bazel-central-registry" name="platform/external/bazelbuild-bazel-central-registry" groups="ddk-external" revision="7018452ffac4fc070b29d5c5c872bac3c746a06a" />
+
+  <project path="external/bazelbuild-platforms" name="platform/external/bazelbuild-platforms" groups="ddk-external" revision="04d937168075c80205c96f31752000e9de759adb" />
+
+  <project path="external/bazelbuild-apple_support" name="platform/external/bazelbuild-apple_support" groups="ddk-external" revision="f6003e1e3763f8aad9fb9acae79cfa5fff9ae988" />
+
+  <project path="external/bazelbuild-rules_cc" name="platform/external/bazelbuild-rules_cc" groups="ddk-external" revision="5d626dcf48e0e97933b48456a86966971799c9e9" />
+
+  <project path="external/bazelbuild-rules_java" name="platform/external/bazelbuild-rules_java" groups="ddk-external" revision="8e548c7053dffd1717d565f0409a88992f401da1" />
+
+  <project path="external/bazelbuild-rules_license" name="platform/external/bazelbuild-rules_license" groups="ddk-external" revision="f578df4fd057ffe2023728444759535685631548" />
+
+  <project path="external/bazelbuild-rules_pkg" name="platform/external/bazelbuild-rules_pkg" groups="ddk-external" revision="632ab98c81cf295750dc096142d4ca76264084bc" />
+
+  <project path="external/bazelbuild-rules_python" name="platform/external/bazelbuild-rules_python" groups="ddk-external" revision="f71847ac898655b67634bb14e77a7408c4fb5e00" />
+
+  <project path="external/bazelbuild-rules_rust" name="platform/external/bazelbuild-rules_rust" groups="ddk-external" revision="1520b49835be9122c2424231357d4db80069cc38" />
+
+  <project path="external/python/absl-py" name="platform/external/python/absl-py" groups="ddk-external" revision="9ae5a78fc57c3cd539398373ae39601a8b923e62" />
+
+  <project path="external/lz4" name="platform/external/lz4" groups="ddk" revision="124599333514066524f55f5f41fbf0d46212e598" />
+
+  <project path="external/pigz" name="platform/external/pigz" groups="ddk" revision="9bc9fa17d499ddde88b77820f6d063e16c0cdd42" />
+
+  <project path="external/toybox" name="platform/external/toybox" groups="ddk" revision="0feb6bf3518621015eb370556542466a56a9f904" />
+
+  <project path="external/zlib" name="platform/external/zlib" groups="ddk" revision="442551c7e0bd1c81e1fb91019ce373f2b66bfafe" />
+
+  <project path="external/zopfli" name="platform/external/zopfli" groups="ddk" revision="36c79f00e5229800d2aaa13fc42c301ec8ef1153" />
+
+  <project path="test/dittosuite" name="platform/test/dittosuite" revision="9507f591b08c1547abc7bf0de8737c44fb00322a" />
+
+  <project path="test/ltp" name="platform/external/ltp" revision="416b3260be4105870f60cd6a730f2985933530c8" />
+</manifest>
