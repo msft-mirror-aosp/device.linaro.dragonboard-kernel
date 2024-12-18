@@ -7,7 +7,7 @@
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android15-6.6" />
 
-  <project path="build/kernel" name="kernel/build" groups="ddk" revision="a9c2595a49f03227e30069b0b7ea4fa7ab69a906">
+  <project path="build/kernel" name="kernel/build" groups="ddk" revision="ed7645d81fdc7cda82e34ccf34cb81877469e5b2">
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
 
     <linkfile dest="WORKSPACE" src="kleaf/bazel.WORKSPACE" />
@@ -17,17 +17,27 @@
     <linkfile dest="WORKSPACE.bzlmod" src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod" />
 </project>
 
-  <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="ddk" revision="212bca45fa9e280adc98081483f649814baf4b61" />
+  <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="ddk" revision="2302fbc4996dc796d8cfa3802bf57cf71ce5c245" />
 
-  <project path="common" name="kernel/common" revision="bb616d66d8a994c75a1fc96731776fc6ec108f1e" />
+  <project path="common" name="kernel/common" revision="5ed2c04099720a6ad5f4157d08f33b6ad9bd59a4" />
 
-  <project path="kernel/tests" name="kernel/tests" revision="b46b107f40a525386657729465fefac179fc5404" />
+  <project path="kernel/configs" name="kernel/configs" revision="2016c89adca143e9e722ef04caf22d76dcae11f2" />
 
-  <project path="kernel/configs" name="kernel/configs" revision="7de932a4b942d7e7677b0116a2e257e050163bb9" />
+  <project path="kernel/tests" name="kernel/tests" revision="3c6e5671e157d0f26e9c42e23bda2b8d8f78088a">
+    <linkfile dest="run_test_only.sh" src="tools/run_test_only.sh" />
 
-  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="49667de6bd8e2639134db653b07044b859cbc1ef" />
+    <linkfile dest="launch_cvd.sh" src="tools/launch_cvd.sh" />
 
-  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" groups="ddk" revision="2a75ca38045fd5c04b1a35a5db55f8a3a1421001" />
+    <linkfile dest="flash_device.sh" src="tools/flash_device.sh" />
+</project>
+
+  <project path="common-modules/trusty" name="kernel/common-modules/trusty" revision="98978dd77173b8b4ce131b29752a882913a9bac3" />
+
+  <project path="common-modules/virtio-media" name="platform/external/virtio-media" revision="bddd3bdb29308a095ca334f3fd7150e3e9772d02" />
+
+  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="6a0e1db7f016981c41fc9b10456b28b587fe61fe" />
+
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" groups="ddk" revision="7061673283909f372f4938e45149d23bd10cbd40" />
 
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" groups="ddk" revision="739d8a41b6096d384338a62995a04739aff8693d" />
 
@@ -37,17 +47,17 @@
 
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" groups="ddk" revision="b46264b70e3cdf70d08c9ae2df6ea3002b242ebc" />
 
-  <project path="prebuilts/rust" name="platform/prebuilts/rust" clone-depth="1" revision="a66ee8e635438afbc0eb10e12f44b3417a30eed2" />
+  <project path="prebuilts/rust" name="platform/prebuilts/rust" clone-depth="1" revision="442511af884f074018466f85b4daadd4b0ac0050" />
 
-  <project path="prebuilts/tradefed" name="platform/tools/tradefederation/prebuilts" clone-depth="1" revision="fddb4c6cb91a580ee1f06536b8b5de15e98af638" />
+  <project path="prebuilts/tradefed" name="platform/tools/tradefederation/prebuilts" revision="8b1a81fbe28d8792ee65ce1dae7aa5c12211527f" clone-depth="1" />
 
-  <project path="prebuilts/asuite" name="platform/prebuilts/asuite" clone-depth="1" revision="659188034e89b2456c4cea7e38c80c28589dafa5" />
+  <project path="prebuilts/asuite" name="platform/prebuilts/asuite" revision="fb83528e422829306f6352590e03b6cfb56adab7" clone-depth="1" />
 
   <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" revision="f5c284e8998dd8a085cf027bb518b6c2b84cf744" />
 
-  <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" clone-depth="1" groups="ddk" revision="c6c90521b7c317f13d41bbd9336a8d45ee202cec" />
+  <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" clone-depth="1" revision="c6c90521b7c317f13d41bbd9336a8d45ee202cec" />
 
-  <project path="prebuilts/ndk-r26" name="toolchain/prebuilts/ndk/r26" clone-depth="1" groups="ddk" revision="e535051ebc04204cec44bde38f62385d63180388" />
+  <project path="prebuilts/ndk-r26" name="toolchain/prebuilts/ndk/r26" clone-depth="1" groups="ddk" revision="abad5cbde7eb9684e37d7569810743a8a34826af" />
 
   <project path="external/libcap-ng" name="platform/external/libcap-ng" revision="2bcc92ae19481dd2b8d3ce3abdfbbee49261abe6" />
 
@@ -67,7 +77,7 @@
 
   <project path="external/bazelbuild-rules_license" name="platform/external/bazelbuild-rules_license" groups="ddk-external" revision="f578df4fd057ffe2023728444759535685631548" />
 
-  <project path="external/bazelbuild-rules_pkg" name="platform/external/bazelbuild-rules_pkg" groups="ddk-external" revision="632ab98c81cf295750dc096142d4ca76264084bc" />
+  <project path="external/bazelbuild-rules_pkg" name="platform/external/bazelbuild-rules_pkg" groups="ddk-external" revision="f91631bcb97956f7bdf4cdf7523d5d2e63f85b5c" />
 
   <project path="external/bazelbuild-rules_python" name="platform/external/bazelbuild-rules_python" groups="ddk-external" revision="f71847ac898655b67634bb14e77a7408c4fb5e00" />
 
