@@ -1,2 +1,2 @@
-certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.12.18-android16-3-maybe-dirty
-kernel_release=6.12.18-android16-3-maybe-dirty
+certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.12.30-android16-5-g7f804a5b81b5-ab13784477
+kernel_release=6.12.30-android16-5-g7f804a5b81b5-ab13784477
