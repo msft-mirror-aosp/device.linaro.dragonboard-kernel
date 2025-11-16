@@ -1,2 +1,2 @@
-certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.16.0-rc7-mainline-g00599aee7ad0-ab13843092
-kernel_release=6.16.0-rc7-mainline-g00599aee7ad0-ab13843092
+certify_bootimg_extra_args=--prop ARCH:arm64 --prop BRANCH: --prop KERNEL_RELEASE:6.17.0-mainline-g392cf335fa22-ab14205657
+kernel_release=6.17.0-mainline-g392cf335fa22-ab14205657
